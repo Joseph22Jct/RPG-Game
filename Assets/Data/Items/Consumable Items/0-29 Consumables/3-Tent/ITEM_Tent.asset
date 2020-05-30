@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88501241712afd94da35fdad54013720, type: 3}
+  m_Name: ITEM_Tent
+  m_EditorClassIdentifier: 
+  ClassName: Tent
+  Description: Restores 20 HP of all the party. Can't be used in battle.
+  icon: {fileID: -4823958372989584960, guid: 9f3b761ee19a1fd4d929496f78ec894a, type: 3}
+  ID: 3
+  isEquip: {fileID: 0}
+  isConsumable: {fileID: 11400000, guid: 3cb1f9ae4d6fd6c49bc39f7d8b491d77, type: 2}
+  buyCost: 25
+  isEmptyEquip: 0

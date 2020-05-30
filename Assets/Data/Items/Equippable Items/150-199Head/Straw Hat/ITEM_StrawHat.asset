@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88501241712afd94da35fdad54013720, type: 3}
+  m_Name: ITEM_StrawHat
+  m_EditorClassIdentifier: 
+  ClassName: Straw Hat
+  Description: A hat that's made with... not straws.
+  icon: {fileID: 2853460448436994324, guid: 9f3b761ee19a1fd4d929496f78ec894a, type: 3}
+  ID: 151
+  isEquip: {fileID: 11400000, guid: 8c8422b1c26c6a349aec6d9d9d5fe639, type: 2}
+  isConsumable: {fileID: 0}
+  buyCost: 10
+  isEmptyEquip: 0
