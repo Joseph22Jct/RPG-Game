@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         Anim = GetComponent<PlayerUnitAnimation>();
         render = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
-        Anim.
+    
     }
 
     bool dragisUsed;
@@ -133,6 +133,12 @@ public class PlayerMovement : MonoBehaviour
     bool checkWithinRange(Vector3 number, Vector3 min, Vector3 max){
         if(number.x>=min.x && number.x<=max.x && number.y>=min.y && number.y<=max.y  ) return true;
         else return false;
+    }
+
+    private void OnEnable() {
+        PlayableUnit PU;
+        PU = GameplayPartyManager.Instance.PartyMembers[0];
+        Anim.SetEquipment(PU.GetWeapon().isEquip, PU.GetHead().isEquip, PU.GetChest().isEquip, PU.GetLegs().isEquip, PU.GetColor());
     }
 }
 

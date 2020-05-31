@@ -8,7 +8,7 @@ public class PlayableUnit
     string Description;
 
     Species specie;
-    float[] UnitColor = new float[3];
+    Color UnitColor;
 
     int[] BaseStats = new int[7]; //In order: HP, MP, Atk, Def, S Atk, S Def, Spd
 
@@ -69,6 +69,10 @@ public class PlayableUnit
         return this;
 
 
+    }
+
+    public Color GetColor(){
+        return UnitColor;
     }
 
     public Species getSpecies(){

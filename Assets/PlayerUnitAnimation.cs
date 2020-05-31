@@ -43,7 +43,7 @@ public class PlayerUnitAnimation : MonoBehaviour
     float time;
     public float val = 0.3f;
 
-    public void SetEquipment(UsableEquipment WeaponE, UsableEquipment HeadE, UsableEquipment ChestE, UsableEquipment LegsE){
+    public void SetEquipment(UsableEquipment WeaponE, UsableEquipment HeadE, UsableEquipment ChestE, UsableEquipment LegsE, Color assignedColor){
         Weapon = WeaponE;
         Headgear = HeadE;
         Chest = ChestE;
