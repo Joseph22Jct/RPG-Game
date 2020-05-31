@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc43690bac11646448e0f94c19ff2a82, type: 3}
   m_Name: EQUIP_Cool_Sunglasses
   m_EditorClassIdentifier: 
+  colors:
+  - {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
   EquipmentType: 1
   maxEXP: 200
   boosts: 000000000a0000000000000000000000000000000000000000000000
@@ -28,27 +37,26 @@ MonoBehaviour:
   Reward: {fileID: 11400000, guid: 6662d3906c2d37f43af712a43ce05b93, type: 2}
   ElementalType: 0
   WeaponAccuracy: 0
-  FrontIdle:
+  SouthWalking:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  FrontPhys:
-  - {fileID: 0}
-  - {fileID: 0}
-  FrontMag:
-  - {fileID: 0}
-  - {fileID: 0}
-  BackIdle:
+  NorthWalking:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  BackPhys:
+  EastWalking:
   - {fileID: 0}
   - {fileID: 0}
-  BackMag:
+  - {fileID: 0}
+  WestWalking:
   - {fileID: 0}
   - {fileID: 0}
-  Win:
+  - {fileID: 0}
+  PrepAttack:
+  - {fileID: 0}
+  - {fileID: 0}
+  WeaponSprite:
   - {fileID: 0}
   - {fileID: 0}
   Hurt: {fileID: 0}

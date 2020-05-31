@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool StopMove;
     SpriteRenderer render;
     PlayerUnitAnimation Anim;
+    public WeaponRecolor VisibleWeapons;
 
      private static PlayerMovement _instance;
     public static PlayerMovement Instance{
@@ -57,9 +58,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Mathf.Abs(xval) > Mathf.Abs(yval)){
             if(xval >0){
+                Anim.WalkEast();
                 Debug.Log("East Walking");
             }
             else{
+                Anim.WalkWest();
                 Debug.Log("west Walking");
             }
 
@@ -67,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         
         else if(Mathf.Abs(xval) < Mathf.Abs(yval)){
             if(yval > 0){
+                Anim.WalkNorth();
                 Debug.Log("North Walking");
             }
             else{
@@ -136,9 +140,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnEnable() {
+        Anim = GetComponent<PlayerUnitAnimation>();
         PlayableUnit PU;
         PU = GameplayPartyManager.Instance.PartyMembers[0];
-        Anim.SetEquipment(PU.GetWeapon().isEquip, PU.GetHead().isEquip, PU.GetChest().isEquip, PU.GetLegs().isEquip, PU.GetColor());
+        Anim.SetEquipment(PU.GetWeapon().isEquip, PU.GetHead().isEquip, PU.GetChest().isEquip, PU.GetLegs().isEquip, PU.GetColor(), PU.getSpecies());
     }
 }
 

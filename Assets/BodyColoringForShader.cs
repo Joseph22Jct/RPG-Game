@@ -66,6 +66,6 @@ public class BodyColoringForShader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       SetColors();
     }
 }

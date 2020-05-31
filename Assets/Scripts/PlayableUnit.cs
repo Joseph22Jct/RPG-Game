@@ -173,6 +173,7 @@ public class PlayableUnit
         UnitColor[0] = colorR;
         UnitColor[1] = colorG;
         UnitColor[2] = colorB;
+        UnitColor[3] = 1;
     }
 
     public void setEquipmentEXP(UsableItem EID, int EXP){

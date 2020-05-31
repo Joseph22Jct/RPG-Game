@@ -6,10 +6,13 @@ using UnityEngine;
 public class UsableEquipment : ScriptableObject
 {
     //Scriptable object, has an ID, name, stat increase, effect, weapon mastery exp limit (int) and Mastery Reward
+    public Color[] colors = new Color[8];
+    
     
 
     public int EquipmentType; // 0 = weapon, 1 = Head, 2 = Chest, 3 = Legs.
     public int maxEXP;
+    
 
     
 
@@ -27,6 +30,8 @@ public class UsableEquipment : ScriptableObject
     public Sprite[] EastWalking = new Sprite[3];
     public Sprite[] WestWalking = new Sprite[3];
     public Sprite[] PrepAttack = new Sprite[2];
+
+    public Sprite[] WeaponSprite = new Sprite[2];
 
     public Sprite Hurt;
     public Sprite Death;

@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc43690bac11646448e0f94c19ff2a82, type: 3}
   m_Name: EQUIP_Tattered_Shirt
   m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.3018868, g: 0.18829058, b: 0.09540761, a: 1}
+  - {r: 0.254717, g: 0.1457481, b: 0.073291205, a: 1}
+  - {r: 0.18867922, g: 0.029369881, b: 0.029369881, a: 1}
+  - {r: 0.2264151, g: 0.013883951, b: 0.013883951, a: 1}
+  - {r: 0.5660378, g: 0.5075563, b: 0.3070488, a: 1}
+  - {r: 0.8784314, g: 0.7670205, b: 0.5411765, a: 1}
+  - {r: 0.972549, g: 0.7899355, b: 0.54509807, a: 1}
+  - {r: 0.990566, g: 0.71833, b: 0.5186454, a: 1}
   EquipmentType: 2
   maxEXP: 10
   boosts: 00000000000000000000000000000000000000000000000000000000
@@ -28,27 +37,26 @@ MonoBehaviour:
   Reward: {fileID: 11400000, guid: aa14ccfbf40baf54cb2a82cb73a65335, type: 2}
   ElementalType: 0
   WeaponAccuracy: 0
-  FrontIdle:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  FrontPhys:
-  - {fileID: 0}
-  - {fileID: 0}
-  FrontMag:
-  - {fileID: 0}
-  - {fileID: 0}
-  BackIdle:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  BackPhys:
-  - {fileID: 0}
-  - {fileID: 0}
-  BackMag:
-  - {fileID: 0}
-  - {fileID: 0}
-  Win:
+  SouthWalking:
+  - {fileID: -4076191974167350435, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: -1370465133794732861, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: 7179241143697982700, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  NorthWalking:
+  - {fileID: 8978167662834336493, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: 6021322204459063423, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: -1512207036422984835, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  EastWalking:
+  - {fileID: 8028571527747746790, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: 917532334240889448, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: -390048456861518766, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  WestWalking:
+  - {fileID: 832737296150488614, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: -4193902603694583956, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: -8209443644329234307, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  PrepAttack:
+  - {fileID: -29211330445388853, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  - {fileID: -297323571186812243, guid: 8955ef4796a2c6b46be65a382330a23b, type: 3}
+  WeaponSprite:
   - {fileID: 0}
   - {fileID: 0}
   Hurt: {fileID: 0}
