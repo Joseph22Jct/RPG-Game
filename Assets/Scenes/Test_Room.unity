@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 36392326}
   - component: {fileID: 36392325}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameplayManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1763,7 +1763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &37171529
 GameObject:
@@ -5070,6 +5070,96 @@ MonoBehaviour:
   m_Spacing: {x: 16, y: 7}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!21 &120759840
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Weapon (Instance) (Instance) (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorPick1: 0.1
+    - _ColorPick2: 0.2
+    - _ColorPick3: 0.3
+    - _ColorPick4: 0.4
+    - _ColorPick5: 0.5
+    - _ColorPick6: 0.6
+    - _ColorPick7: 0.7
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.3018868, g: 0.18829058, b: 0.09540761, a: 1}
+    - _Color2: {r: 0.254717, g: 0.1457481, b: 0.073291205, a: 1}
+    - _Color3: {r: 0.18867922, g: 0.029369881, b: 0.029369881, a: 1}
+    - _Color4: {r: 0.2264151, g: 0.013883951, b: 0.013883951, a: 1}
+    - _Color5: {r: 0.5660378, g: 0.5075563, b: 0.3070488, a: 1}
+    - _Color6: {r: 0.8784314, g: 0.7670205, b: 0.5411765, a: 1}
+    - _Color7: {r: 0.972549, g: 0.7899355, b: 0.54509807, a: 1}
+    - _Color8: {r: 0.990566, g: 0.71833, b: 0.5186454, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &120894779
 GameObject:
   m_ObjectHideFlags: 0
@@ -8888,7 +8978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &188162436
 MonoBehaviour:
@@ -17076,7 +17166,7 @@ RectTransform:
   - {fileID: 2112184616}
   - {fileID: 1034909755}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17101,6 +17191,7 @@ MonoBehaviour:
   Menu: {fileID: 1421889131}
   InventoryWindow: {fileID: 1992597127}
   menuUI: {fileID: 1421889133}
+  OWPlayer: {fileID: 1004802525}
   descman: {fileID: 1952594244}
   menuSelectManager: {fileID: 1429640303}
 --- !u!1001 &387967485
@@ -22304,7 +22395,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1016990843}
+  - {fileID: 1130189080}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32316,96 +32407,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700936753}
   m_CullTransparentMesh: 0
---- !u!21 &703138725
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Weapon (Instance) (Instance) (Instance)
-  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorPick1: 0.1
-    - _ColorPick2: 0.2
-    - _ColorPick3: 0.3
-    - _ColorPick4: 0.4
-    - _ColorPick5: 0.5
-    - _ColorPick6: 0.6
-    - _ColorPick7: 0.7
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.3018868, g: 0.18829058, b: 0.09540761, a: 1}
-    - _Color2: {r: 0.254717, g: 0.1457481, b: 0.073291205, a: 1}
-    - _Color3: {r: 0.18867922, g: 0.029369881, b: 0.029369881, a: 1}
-    - _Color4: {r: 0.2264151, g: 0.013883951, b: 0.013883951, a: 1}
-    - _Color5: {r: 0.5660378, g: 0.5075563, b: 0.3070488, a: 1}
-    - _Color6: {r: 0.8784314, g: 0.7670205, b: 0.5411765, a: 1}
-    - _Color7: {r: 0.972549, g: 0.7899355, b: 0.54509807, a: 1}
-    - _Color8: {r: 0.990566, g: 0.71833, b: 0.5186454, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &703489030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39392,7 +39393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842707548
 GameObject:
@@ -41803,96 +41804,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902365950}
   m_CullTransparentMesh: 0
---- !u!21 &904066713
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Weapon (Instance) (Instance) (Instance)
-  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorPick1: 0.1
-    - _ColorPick2: 0.2
-    - _ColorPick3: 0.3
-    - _ColorPick4: 0.4
-    - _ColorPick5: 0.5
-    - _ColorPick6: 0.6
-    - _ColorPick7: 0.7
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 1, b: 1, a: 1}
-    - _Color2: {r: 1, g: 1, b: 1, a: 1}
-    - _Color3: {r: 1, g: 1, b: 1, a: 1}
-    - _Color4: {r: 1, g: 1, b: 1, a: 1}
-    - _Color5: {r: 1, g: 1, b: 1, a: 1}
-    - _Color6: {r: 1, g: 1, b: 1, a: 1}
-    - _Color7: {r: 1, g: 1, b: 1, a: 1}
-    - _Color8: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &904547106
 GameObject:
   m_ObjectHideFlags: 0
@@ -50042,6 +49953,7 @@ MonoBehaviour:
   - {fileID: 507832760}
   Weapon: {fileID: 0}
   Headgear: {fileID: 0}
+  WeaponObject: {fileID: 1503645481}
   Chest: {fileID: 0}
   Legs: {fileID: 0}
   playerSpecies: {fileID: 0}
@@ -50082,7 +49994,7 @@ Transform:
   - {fileID: 1426573785}
   - {fileID: 1582514386}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1004802527
 BoxCollider2D:
@@ -50300,7 +50212,7 @@ RectTransform:
   m_Children:
   - {fileID: 146192484}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -50499,96 +50411,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 703489030}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1016990843
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Weapon (Instance) (Instance) (Instance)
-  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorPick1: 0.1
-    - _ColorPick2: 0.2
-    - _ColorPick3: 0.3
-    - _ColorPick4: 0.4
-    - _ColorPick5: 0.5
-    - _ColorPick6: 0.7
-    - _ColorPick7: 0.8
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.09433961, g: 0.053844776, b: 0.053844776, a: 1}
-    - _Color2: {r: 1, g: 0.33490568, b: 0.33490568, a: 1}
-    - _Color3: {r: 0.18867922, g: 0.075649686, b: 0.075649686, a: 1}
-    - _Color4: {r: 0.5647059, g: 0.5058824, b: 0.30588236, a: 1}
-    - _Color5: {r: 0.5647059, g: 0.5058824, b: 0.30588236, a: 1}
-    - _Color6: {r: 0.9725491, g: 0.78823537, b: 0.54509807, a: 1}
-    - _Color7: {r: 0.50980395, g: 0.50980395, b: 0.61960787, a: 1}
-    - _Color8: {r: 0.9528302, g: 0.4539427, b: 0.4539427, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &1017105931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59735,7 +59557,7 @@ PrefabInstance:
     - target: {fileID: 2100064101512909233, guid: 7f0003a8da5028541b22896742472a3b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2100064101512909233, guid: 7f0003a8da5028541b22896742472a3b,
         type: 3}
@@ -68057,6 +67879,96 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1231094065}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1130189080
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Weapon (Instance) (Instance) (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorPick1: 0.1
+    - _ColorPick2: 0.2
+    - _ColorPick3: 0.3
+    - _ColorPick4: 0.4
+    - _ColorPick5: 0.5
+    - _ColorPick6: 0.7
+    - _ColorPick7: 0.8
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.09433961, g: 0.053844776, b: 0.053844776, a: 1}
+    - _Color2: {r: 1, g: 0.33490568, b: 0.33490568, a: 1}
+    - _Color3: {r: 0.18867922, g: 0.075649686, b: 0.075649686, a: 1}
+    - _Color4: {r: 0.5647059, g: 0.5058824, b: 0.30588236, a: 1}
+    - _Color5: {r: 0.5647059, g: 0.5058824, b: 0.30588236, a: 1}
+    - _Color6: {r: 0.9725491, g: 0.78823537, b: 0.54509807, a: 1}
+    - _Color7: {r: 0.50980395, g: 0.50980395, b: 0.61960787, a: 1}
+    - _Color8: {r: 0.9528302, g: 0.4539427, b: 0.4539427, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1132080872
 GameObject:
   m_ObjectHideFlags: 0
@@ -71655,7 +71567,7 @@ PrefabInstance:
     - target: {fileID: 2100064101512909233, guid: 7f0003a8da5028541b22896742472a3b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2100064101512909233, guid: 7f0003a8da5028541b22896742472a3b,
         type: 3}
@@ -75300,7 +75212,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 703138725}
+  - {fileID: 120759840}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84969,7 +84881,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 904066713}
+  - {fileID: 1592123956}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88055,6 +87967,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579598116}
   m_CullTransparentMesh: 0
+--- !u!21 &1580525424
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Weapon (Instance) (Instance) (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorPick1: 0.1
+    - _ColorPick2: 0.2
+    - _ColorPick3: 0.3
+    - _ColorPick4: 0.4
+    - _ColorPick5: 0.5
+    - _ColorPick6: 0.6
+    - _ColorPick7: 0.7
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
+    - _Color2: {r: 0, g: 0, b: 0, a: 1}
+    - _Color3: {r: 0, g: 0, b: 0, a: 0}
+    - _Color4: {r: 0, g: 0, b: 0, a: 0}
+    - _Color5: {r: 0, g: 0, b: 0, a: 0}
+    - _Color6: {r: 0, g: 0, b: 0, a: 0}
+    - _Color7: {r: 0, g: 0, b: 0, a: 0}
+    - _Color8: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1582514385
 GameObject:
   m_ObjectHideFlags: 0
@@ -88353,6 +88355,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592106233}
   m_CullTransparentMesh: 0
+--- !u!21 &1592123956
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Weapon (Instance) (Instance) (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorPick1: 0.1
+    - _ColorPick2: 0.2
+    - _ColorPick3: 0.3
+    - _ColorPick4: 0.4
+    - _ColorPick5: 0.5
+    - _ColorPick6: 0.6
+    - _ColorPick7: 0.7
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 1}
+    - _Color3: {r: 1, g: 1, b: 1, a: 1}
+    - _Color4: {r: 1, g: 1, b: 1, a: 1}
+    - _Color5: {r: 1, g: 1, b: 1, a: 1}
+    - _Color6: {r: 1, g: 1, b: 1, a: 1}
+    - _Color7: {r: 1, g: 1, b: 1, a: 1}
+    - _Color8: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1592752633
 GameObject:
   m_ObjectHideFlags: 0
@@ -95474,7 +95566,7 @@ Transform:
   - {fileID: 999543152}
   - {fileID: 1083225011}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765120610
 GameObject:
@@ -98119,7 +98211,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1915343479}
+  - {fileID: 1580525424}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101860,96 +101952,6 @@ MonoBehaviour:
   Unit1Button: {fileID: 75562705}
   Unit2Button: {fileID: 1331771150}
   Unit3Button: {fileID: 1896719472}
---- !u!21 &1915343479
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Weapon (Instance) (Instance) (Instance)
-  m_Shader: {fileID: 4800000, guid: 86e5a49c2f91eb84e8a2075d7adc952e, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorPick1: 0.1
-    - _ColorPick2: 0.2
-    - _ColorPick3: 0.3
-    - _ColorPick4: 0.4
-    - _ColorPick5: 0.5
-    - _ColorPick6: 0.6
-    - _ColorPick7: 0.7
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
-    - _Color2: {r: 0, g: 0, b: 0, a: 1}
-    - _Color3: {r: 0, g: 0, b: 0, a: 0}
-    - _Color4: {r: 0, g: 0, b: 0, a: 0}
-    - _Color5: {r: 0, g: 0, b: 0, a: 0}
-    - _Color6: {r: 0, g: 0, b: 0, a: 0}
-    - _Color7: {r: 0, g: 0, b: 0, a: 0}
-    - _Color8: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &1915372478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104430,7 +104432,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964058560
 GameObject:

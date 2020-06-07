@@ -22,10 +22,12 @@ public class TreasureChestScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        try{
         if (GameplayPartyManager.Instance.getChestTrigger(ChestID)){
             isOpen = true;
             GetComponent<SpriteRenderer>().sprite = openChest;
         }
+        }catch{};
 
         
 

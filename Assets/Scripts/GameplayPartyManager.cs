@@ -36,7 +36,7 @@ public class GameplayPartyManager : MonoBehaviour
         newUnit.setName("Cyan");
         newUnit.setDescription("The Azure warrior of legend");
         newUnit.SetSpecies(defaultSpecies);
-        newUnit.setColor(0.2f, 0.3f,0.5f);
+        newUnit.setColor(0.5f, 0.6f,0.7f);
         newUnit.setStatsAfterEquipment();
         PartyMembers.Add(newUnit);
         

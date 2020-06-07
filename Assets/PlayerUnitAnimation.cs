@@ -15,6 +15,7 @@ public class PlayerUnitAnimation : MonoBehaviour
     public WeaponRecolor[] Equips = new WeaponRecolor[4];
     public UsableEquipment Weapon;
     public UsableEquipment Headgear;
+    public GameObject WeaponObject;
     
     public UsableEquipment Chest;
     public UsableEquipment Legs;
@@ -35,36 +36,72 @@ public class PlayerUnitAnimation : MonoBehaviour
 
     private void Update() {
         depth = (int)-(transform.position.y * 10);
+        Body.sortingOrder = depth;
+        Head.sortingOrder = depth +4;
+        HeadgearHolder.sortingOrder = depth +5;
+        ChestHolder.sortingOrder = depth +3;
+        LegsHolder.sortingOrder = depth+2;
+        try{
+        WeaponObject.GetComponent<SpriteRenderer>().sortingOrder = depth-1;
+        } catch{}
+        
         //render.sortingOrder = v;
     }
 
     private void Start() {
-        Weapon = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[0]].GetWeapon().isEquip;
-        Headgear = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[0]].GetHead().isEquip;
-        Chest = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[0]].GetChest().isEquip;
-        Legs = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[0]].GetLegs().isEquip;
+        
     }
 
     float time;
     public float val = 0.3f;
 
-    public void SetEquipment(UsableEquipment WeaponE, UsableEquipment HeadE, UsableEquipment ChestE, UsableEquipment LegsE, Color assignedColor, Species PSpe){
-        Weapon = WeaponE;
-        Equips[0].SetWeapon(Weapon);
-        Headgear = HeadE;
-        Equips[1].SetWeapon(Headgear);
-        Chest = ChestE;
-        Equips[2].SetWeapon(Chest);
-        Legs = LegsE;
-        Equips[3].SetWeapon(Legs);
-        UnitColor = assignedColor;
+    //Make a stand still that takes a dir input
 
-        playerSpecies = PSpe;
+    
+
+    public void SetEquipment(int whichPlayer){
+
+        Weapon = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetWeapon().isEquip;
+        Headgear = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetHead().isEquip;
+        Chest = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetChest().isEquip;
+        Legs = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetLegs().isEquip;
+        
+        Equips[0].SetWeapon(Weapon);
+        
+        Equips[1].SetWeapon(Headgear);
+        
+        Equips[2].SetWeapon(Chest);
+        
+        Equips[3].SetWeapon(Legs);
+        UnitColor = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetColor();
+
+        playerSpecies = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].getSpecies();
         
 
-        BodyColors[0].Colorpick = assignedColor;
-        BodyColors[1].Colorpick = assignedColor;
+        BodyColors[0].Colorpick = UnitColor;
+        BodyColors[1].Colorpick = UnitColor;
 
+    }
+
+    public void StandStill(int dir){
+        HeadGO.transform.localPosition = new Vector3(0,0.5f,0);
+        switch(dir){
+            case 0:
+            CoordinateSprites(0,0);
+            break;
+            case 1:
+            CoordinateSprites(1,0);
+            break;
+            case 2:
+            CoordinateSprites(2,0);
+            break;
+            case 3:
+            CoordinateSprites(3,0);
+            break;
+
+            default:
+            break;
+        }
     }
 
     public void WalkSouth(){
@@ -159,16 +196,9 @@ public class PlayerUnitAnimation : MonoBehaviour
 
     public void CoordinateSprites(int Direction, int slot){
         switch(Direction){
-            case 0: //South
+            
 
-                Body.sprite = SouthWalking[slot];
-                HeadgearHolder.sprite = Headgear.SouthWalking[0];
-                ChestHolder.sprite = Chest.SouthWalking[slot];
-                LegsHolder.sprite = Legs.SouthWalking[slot];
-                Head.sprite = playerSpecies.HeadSprites[0];
-            break;
-
-            case 1: //North
+            case 0: //North
 
                 Body.sprite = NorthWalking[slot];
                 HeadgearHolder.sprite = Headgear.NorthWalking[0];
@@ -176,15 +206,7 @@ public class PlayerUnitAnimation : MonoBehaviour
                 LegsHolder.sprite = Legs.NorthWalking[slot];
                 Head.sprite = playerSpecies.HeadSprites[1];
             break;
-            case 2: //West
-
-                Body.sprite = WestWalking[slot];
-                HeadgearHolder.sprite = Headgear.WestWalking[0];
-                ChestHolder.sprite = Chest.WestWalking[slot];
-                LegsHolder.sprite = Legs.WestWalking[slot];
-                Head.sprite = playerSpecies.HeadSprites[2];
-            break;
-            case 3: //East
+            case 1: //East
 
                 Body.sprite = EastWalking[slot];
                 HeadgearHolder.sprite = Headgear.EastWalking[0];
@@ -192,6 +214,23 @@ public class PlayerUnitAnimation : MonoBehaviour
                 LegsHolder.sprite = Legs.EastWalking[slot];
                 Head.sprite = playerSpecies.HeadSprites[3];
             break;
+            case 2: //South
+
+                Body.sprite = SouthWalking[slot];
+                HeadgearHolder.sprite = Headgear.SouthWalking[0];
+                ChestHolder.sprite = Chest.SouthWalking[slot];
+                LegsHolder.sprite = Legs.SouthWalking[slot];
+                Head.sprite = playerSpecies.HeadSprites[0];
+            break;
+            case 3: //West
+
+                Body.sprite = WestWalking[slot];
+                HeadgearHolder.sprite = Headgear.WestWalking[0];
+                ChestHolder.sprite = Chest.WestWalking[slot];
+                LegsHolder.sprite = Legs.WestWalking[slot];
+                Head.sprite = playerSpecies.HeadSprites[2];
+            break;
+            
             
 
             default:

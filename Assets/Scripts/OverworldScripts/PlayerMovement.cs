@@ -42,28 +42,33 @@ public class PlayerMovement : MonoBehaviour
         Anim = GetComponent<PlayerUnitAnimation>();
         render = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
+        target = transform.position;
+        Anim.StandStill(0);
     
     }
 
     bool dragisUsed;
     // Update is called once per frame
+
+    int direction =0; //Clockwise NESW
     void LateUpdate(){
 
         float xval = target.x - transform.position.x;
         float yval = target.y- transform.position.y;
 
-        Debug.Log(xval);
-        Debug.Log(yval);
+        
         if (xval !=0 && yval !=0){
 
         if(Mathf.Abs(xval) > Mathf.Abs(yval)){
             if(xval >0){
                 Anim.WalkEast();
-                Debug.Log("East Walking");
+                direction = 2;
+                //Debug.Log("East Walking");
             }
             else{
                 Anim.WalkWest();
-                Debug.Log("west Walking");
+                direction = 3;
+                //Debug.Log("west Walking");
             }
 
         }
@@ -71,14 +76,20 @@ public class PlayerMovement : MonoBehaviour
         else if(Mathf.Abs(xval) < Mathf.Abs(yval)){
             if(yval > 0){
                 Anim.WalkNorth();
-                Debug.Log("North Walking");
+                direction = 1;
+                //Debug.Log("North Walking");
             }
             else{
                 Anim.WalkSouth();
-                Debug.Log("South Walking");
+                direction = 0;
+                //Debug.Log("South Walking");
             }
 
         }
+        }
+
+        else{
+            Anim.StandStill(direction);
         }
         if(EventSystem.current.IsPointerOverGameObject()) return;
         /* 
@@ -141,9 +152,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable() {
         Anim = GetComponent<PlayerUnitAnimation>();
-        PlayableUnit PU;
-        PU = GameplayPartyManager.Instance.PartyMembers[0];
-        Anim.SetEquipment(PU.GetWeapon().isEquip, PU.GetHead().isEquip, PU.GetChest().isEquip, PU.GetLegs().isEquip, PU.GetColor(), PU.getSpecies());
+        
+        Anim.SetEquipment(0);
     }
 }
 

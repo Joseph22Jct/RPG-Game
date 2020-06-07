@@ -17,7 +17,8 @@ public class OverworldMenuManager : MonoBehaviour
     bool InventoryOpen;
     bool menuOpen = false;
     
-    
+    [SerializeField] PlayerUnitAnimation OWPlayer;
+ 
 
     public void openMenu(){
         menuOpen = true;
@@ -33,6 +34,7 @@ public class OverworldMenuManager : MonoBehaviour
         SoundManager.Instance.Play("SFX-Cancel");
         
         menuOpen = false;
+
         
         menuUI.SetDisable();
         
@@ -48,9 +50,13 @@ public class OverworldMenuManager : MonoBehaviour
         OpenMenuButton.SetActive(!menuOpen);
         Time.timeScale = 1;
          PlayerMovement.Instance.StopMoving();
-
+        OWPlayer.SetEquipment(0);
+        OWPlayer.StandStill(0);
           descman.Disable();
          menuSelectManager.closeAll();
+
+         
+
     }
 
     [SerializeField] DescriptionManager descman;

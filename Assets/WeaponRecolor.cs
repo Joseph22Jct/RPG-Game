@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[ExecuteInEditMode]
+
 public class WeaponRecolor : MonoBehaviour
 {
     public UsableEquipment currentEquip;
@@ -16,7 +16,7 @@ public class WeaponRecolor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     SetWeapon(currentEquip);  
+      
     }
 
     public void SetWeapon(UsableEquipment equip){
