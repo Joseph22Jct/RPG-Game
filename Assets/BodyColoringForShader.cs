@@ -18,16 +18,18 @@ public class BodyColoringForShader : MonoBehaviour
     [SerializeField] Color color5;
     [SerializeField] Color color6;
     // Start is called before the first frame update
+
+    
     private void OnEnable() {
         
         thisSR = GetComponent<SpriteRenderer>();
         shader = thisSR.material;
-        SetColors();
+        
         
     }
 
-    public void SetColors(){
-
+    public void SetColors(Color TheColor){
+        Colorpick = TheColor;
         
 
          color1 = new Color(Colorpick.r/3, Colorpick.g /3 - 0.1f, Colorpick.b /3,Colorpick.a); // Dark Outline

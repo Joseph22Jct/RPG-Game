@@ -43,7 +43,9 @@ public class PlayerMovement : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
         target = transform.position;
-        Anim.StandStill(0);
+         
+        Anim.SetEquipment(0);
+       Anim.StandStill(0);
     
     }
 
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         if(Mathf.Abs(xval) > Mathf.Abs(yval)){
             if(xval >0){
                 Anim.WalkEast();
-                direction = 2;
+                direction = 1;
                 //Debug.Log("East Walking");
             }
             else{
@@ -76,12 +78,12 @@ public class PlayerMovement : MonoBehaviour
         else if(Mathf.Abs(xval) < Mathf.Abs(yval)){
             if(yval > 0){
                 Anim.WalkNorth();
-                direction = 1;
+                direction = 0;
                 //Debug.Log("North Walking");
             }
             else{
                 Anim.WalkSouth();
-                direction = 0;
+                direction = 2;
                 //Debug.Log("South Walking");
             }
 

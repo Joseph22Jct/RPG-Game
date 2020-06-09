@@ -48,9 +48,7 @@ public class PlayerUnitAnimation : MonoBehaviour
         //render.sortingOrder = v;
     }
 
-    private void Start() {
-        
-    }
+    
 
     float time;
     public float val = 0.3f;
@@ -78,8 +76,8 @@ public class PlayerUnitAnimation : MonoBehaviour
         playerSpecies = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].getSpecies();
         
 
-        BodyColors[0].Colorpick = UnitColor;
-        BodyColors[1].Colorpick = UnitColor;
+        BodyColors[0].SetColors(UnitColor);
+        BodyColors[1].SetColors(UnitColor);
 
     }
 
@@ -109,6 +107,29 @@ public class PlayerUnitAnimation : MonoBehaviour
         time %= val;
         Vector3 HeadPos =new Vector3(0,0.5f,0);
         if(time < val/4){
+            CoordinateSprites(2,0);
+            HeadGO.transform.localPosition = HeadPos;
+        }
+        else if(time < val/2){
+           CoordinateSprites(2,1);
+            HeadGO.transform.localPosition = new Vector3(HeadPos.x, HeadPos.y-0.05f, HeadPos.z);
+        }
+        else if(time < val*3/4){
+            CoordinateSprites(2,0);
+            HeadGO.transform.localPosition = HeadPos;
+        }
+        else{
+            CoordinateSprites(2,2);
+            HeadGO.transform.localPosition = new Vector3(HeadPos.x, HeadPos.y-0.05f, HeadPos.z);
+        }
+
+    }
+
+    public void WalkNorth(){
+        time+= Time.deltaTime;
+        time %= val;
+        Vector3 HeadPos =new Vector3(0,0.5f,0);
+        if(time < val/4){
             CoordinateSprites(0,0);
             HeadGO.transform.localPosition = HeadPos;
         }
@@ -126,8 +147,7 @@ public class PlayerUnitAnimation : MonoBehaviour
         }
 
     }
-
-    public void WalkNorth(){
+    public void WalkEast(){
         time+= Time.deltaTime;
         time %= val;
         Vector3 HeadPos =new Vector3(0,0.5f,0);
@@ -145,28 +165,6 @@ public class PlayerUnitAnimation : MonoBehaviour
         }
         else{
             CoordinateSprites(1,2);
-            HeadGO.transform.localPosition = new Vector3(HeadPos.x, HeadPos.y-0.05f, HeadPos.z);
-        }
-
-    }
-    public void WalkEast(){
-        time+= Time.deltaTime;
-        time %= val;
-        Vector3 HeadPos =new Vector3(0,0.5f,0);
-        if(time < val/4){
-            CoordinateSprites(2,0);
-            HeadGO.transform.localPosition = HeadPos;
-        }
-        else if(time < val/2){
-           CoordinateSprites(2,1);
-            HeadGO.transform.localPosition = new Vector3(HeadPos.x, HeadPos.y-0.05f, HeadPos.z);
-        }
-        else if(time < val*3/4){
-            CoordinateSprites(2,0);
-            HeadGO.transform.localPosition = HeadPos;
-        }
-        else{
-            CoordinateSprites(2,2);
             HeadGO.transform.localPosition = new Vector3(HeadPos.x, HeadPos.y-0.05f, HeadPos.z);
         }
 
@@ -204,7 +202,7 @@ public class PlayerUnitAnimation : MonoBehaviour
                 HeadgearHolder.sprite = Headgear.NorthWalking[0];
                 ChestHolder.sprite = Chest.NorthWalking[slot];
                 LegsHolder.sprite = Legs.NorthWalking[slot];
-                Head.sprite = playerSpecies.HeadSprites[1];
+                Head.sprite = playerSpecies.HeadSprites[0];
             break;
             case 1: //East
 
@@ -212,7 +210,7 @@ public class PlayerUnitAnimation : MonoBehaviour
                 HeadgearHolder.sprite = Headgear.EastWalking[0];
                 ChestHolder.sprite = Chest.EastWalking[slot];
                 LegsHolder.sprite = Legs.EastWalking[slot];
-                Head.sprite = playerSpecies.HeadSprites[3];
+                Head.sprite = playerSpecies.HeadSprites[1];
             break;
             case 2: //South
 
@@ -220,7 +218,7 @@ public class PlayerUnitAnimation : MonoBehaviour
                 HeadgearHolder.sprite = Headgear.SouthWalking[0];
                 ChestHolder.sprite = Chest.SouthWalking[slot];
                 LegsHolder.sprite = Legs.SouthWalking[slot];
-                Head.sprite = playerSpecies.HeadSprites[0];
+                Head.sprite = playerSpecies.HeadSprites[2];
             break;
             case 3: //West
 
@@ -228,7 +226,7 @@ public class PlayerUnitAnimation : MonoBehaviour
                 HeadgearHolder.sprite = Headgear.WestWalking[0];
                 ChestHolder.sprite = Chest.WestWalking[slot];
                 LegsHolder.sprite = Legs.WestWalking[slot];
-                Head.sprite = playerSpecies.HeadSprites[2];
+                Head.sprite = playerSpecies.HeadSprites[3];
             break;
             
             

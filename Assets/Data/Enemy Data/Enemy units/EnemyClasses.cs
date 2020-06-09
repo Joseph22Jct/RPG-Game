@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName= "New Enemy", menuName = "New Enemy")]
+[CreateAssetMenu(fileName= "New Enemy", menuName = "Enemies/New Enemy")]
 
 public class EnemyClasses : ScriptableObject
 {
@@ -16,7 +16,7 @@ public class EnemyClasses : ScriptableObject
     public float[] innateElementResistance = new float[4];
     public bool immuneToNormal;
 
-    public Sprite[] enemySprites = new Sprite[6]; //2 attack sprites, 3 idle, 1 being hit.
+    public Sprite[] enemySprites = new Sprite[3]; //3 moving sprites
 
     //AI, check a video on how is usually handled. Maybe an array of numbers that mean something to the reading combatprefab?
 

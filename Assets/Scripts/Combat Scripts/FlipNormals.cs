@@ -8,7 +8,7 @@ public class FlipNormals : MonoBehaviour
 		MeshFilter filter = GetComponent(typeof (MeshFilter)) as MeshFilter;
 		if (filter != null)
 		{
-			Mesh mesh = filter.mesh;
+			Mesh mesh = filter.sharedMesh;
  
 			Vector3[] normals = mesh.normals;
 			for (int i=0;i<normals.Length;i++)
