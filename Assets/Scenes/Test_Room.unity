@@ -103487,7 +103487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1004802523}
-  theGroup: {fileID: 0}
+  theGroup: {fileID: 11400000, guid: 671a41e4fc605724aa750abefada1bd4, type: 2}
 --- !u!70 &1960538679
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

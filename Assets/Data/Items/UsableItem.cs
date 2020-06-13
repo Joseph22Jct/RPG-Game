@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName= "New Item", menuName = "New Item")]
+[CreateAssetMenu(fileName= "New Item", menuName = "Items/New Item")]
 public class UsableItem : ScriptableObject
 {
      public string ClassName;
@@ -17,6 +17,8 @@ public class UsableItem : ScriptableObject
     public int buyCost;
     public bool isEmptyEquip;
     public bool isKeyItem;
+
+    
 
 
 

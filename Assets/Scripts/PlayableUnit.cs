@@ -19,6 +19,8 @@ public class PlayableUnit
     float[] innateElementRes = new float[4]; //Carries percentage resistance to status effects.
     float[] FinalElementRes = new float[4];
 
+    Moves[] AvailableMoves = new Moves[1];
+
     int CurrentHP;
     int CurrentMP;
     int Status = -1; //0 = Poison, 1 = Silence, 2 = Sleep, 3= Blind. 4=Burn -1 is no status effect. -2 = Dead
@@ -69,6 +71,10 @@ public class PlayableUnit
         return this;
 
 
+    }
+
+    public Moves[] GetMoves(){
+        return AvailableMoves;
     }
 
     public Color GetColor(){

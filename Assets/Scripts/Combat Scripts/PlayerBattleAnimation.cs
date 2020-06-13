@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerUnitAnimation : MonoBehaviour
-{   
-    int depth;
+public class PlayerBattleAnimation : MonoBehaviour
+{
+       
     public SpriteRenderer Body;
     public GameObject HeadGO;
     public SpriteRenderer Head;
@@ -12,7 +12,15 @@ public class PlayerUnitAnimation : MonoBehaviour
     public SpriteRenderer HeadgearHolder;
     public SpriteRenderer ChestHolder;
     public SpriteRenderer LegsHolder;
-    public WeaponRecolor[] Equips = new WeaponRecolor[4];
+
+    public SpriteRenderer BackBody;
+    public GameObject BackHeadGO;
+    public SpriteRenderer BackHead;
+    
+    public SpriteRenderer BackHeadgearHolder;
+    public SpriteRenderer BackChestHolder;
+    public SpriteRenderer BackLegsHolder;
+    public WeaponRecolor[] Equips = new WeaponRecolor[8];
     public UsableEquipment Weapon;
     public UsableEquipment Headgear;
     public GameObject WeaponObject;
@@ -21,8 +29,6 @@ public class PlayerUnitAnimation : MonoBehaviour
     public UsableEquipment Legs;
 
     public Species playerSpecies;
-
-    bool NorthGoing;
 
     
 
@@ -34,29 +40,8 @@ public class PlayerUnitAnimation : MonoBehaviour
 
     Color UnitColor;
 
-    public BodyColoringForShader[] BodyColors = new BodyColoringForShader[2];
+    public BodyColoringForShader[] BodyColors = new BodyColoringForShader[4];
 
-    private void Update() {
-        depth = (int)-(transform.position.y * 10);
-        Body.sortingOrder = depth;
-        if(!NorthGoing){
-        Head.sortingOrder = depth +4;
-        HeadgearHolder.sortingOrder = depth +5;
-        }
-        else{
-            Head.sortingOrder = depth -1;
-        HeadgearHolder.sortingOrder = depth -2;
-        }
-        ChestHolder.sortingOrder = depth +3;
-        LegsHolder.sortingOrder = depth+2;
-        try{
-        WeaponObject.GetComponent<SpriteRenderer>().sortingOrder = depth-1;
-        } catch{}
-        
-        //render.sortingOrder = v;
-    }
-
-    
 
     float time;
     public float val = 0.3f;
@@ -79,6 +64,13 @@ public class PlayerUnitAnimation : MonoBehaviour
         Equips[2].SetWeapon(Chest);
         
         Equips[3].SetWeapon(Legs);
+        Equips[4].SetWeapon(Weapon);
+        
+        Equips[5].SetWeapon(Headgear);
+        
+        Equips[6].SetWeapon(Chest);
+        
+        Equips[7].SetWeapon(Legs);
         UnitColor = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetColor();
 
         playerSpecies = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].getSpecies();
@@ -86,6 +78,10 @@ public class PlayerUnitAnimation : MonoBehaviour
 
         BodyColors[0].SetColors(UnitColor);
         BodyColors[1].SetColors(UnitColor);
+        BodyColors[2].SetColors(UnitColor);
+        BodyColors[3].SetColors(UnitColor);
+
+        StandStill(0);
 
     }
 
@@ -205,36 +201,62 @@ public class PlayerUnitAnimation : MonoBehaviour
             
 
             case 0: //North
-                NorthGoing = true;
+
                 Body.sprite = NorthWalking[slot];
+                
                 HeadgearHolder.sprite = Headgear.NorthWalking[0];
+                
                 ChestHolder.sprite = Chest.NorthWalking[slot];
                 LegsHolder.sprite = Legs.NorthWalking[slot];
                 Head.sprite = playerSpecies.HeadSprites[0];
+
+                BackBody.sprite = SouthWalking[slot];
+                BackHeadgearHolder.sprite = Headgear.SouthWalking[0];
+                BackChestHolder.sprite = Chest.SouthWalking[slot];
+                BackLegsHolder.sprite = Legs.SouthWalking[slot];
+                BackHead.sprite = playerSpecies.HeadSprites[2];
             break;
             case 1: //East
-                NorthGoing = false;
+
                 Body.sprite = EastWalking[slot];
                 HeadgearHolder.sprite = Headgear.EastWalking[0];
                 ChestHolder.sprite = Chest.EastWalking[slot];
                 LegsHolder.sprite = Legs.EastWalking[slot];
                 Head.sprite = playerSpecies.HeadSprites[1];
+
+                BackBody.sprite = WestWalking[slot];
+                BackHeadgearHolder.sprite = Headgear.WestWalking[0];
+                BackChestHolder.sprite = Chest.WestWalking[slot];
+                BackLegsHolder.sprite = Legs.WestWalking[slot];
+                BackHead.sprite = playerSpecies.HeadSprites[3];
             break;
             case 2: //South
-                NorthGoing = false;
+
                 Body.sprite = SouthWalking[slot];
                 HeadgearHolder.sprite = Headgear.SouthWalking[0];
                 ChestHolder.sprite = Chest.SouthWalking[slot];
                 LegsHolder.sprite = Legs.SouthWalking[slot];
                 Head.sprite = playerSpecies.HeadSprites[2];
+
+                BackBody.sprite = NorthWalking[slot];
+                BackHeadgearHolder.sprite = Headgear.NorthWalking[0];
+                BackChestHolder.sprite = Chest.NorthWalking[slot];
+                BackLegsHolder.sprite = Legs.NorthWalking[slot];
+                BackHead.sprite = playerSpecies.HeadSprites[0];
             break;
             case 3: //West
-                NorthGoing = false;
+
                 Body.sprite = WestWalking[slot];
                 HeadgearHolder.sprite = Headgear.WestWalking[0];
                 ChestHolder.sprite = Chest.WestWalking[slot];
                 LegsHolder.sprite = Legs.WestWalking[slot];
                 Head.sprite = playerSpecies.HeadSprites[3];
+
+                BackBody.sprite = EastWalking[slot];
+                BackHeadgearHolder.sprite = Headgear.EastWalking[0];
+                BackChestHolder.sprite = Chest.EastWalking[slot];
+                BackLegsHolder.sprite = Legs.EastWalking[slot];
+                BackHead.sprite = playerSpecies.HeadSprites[1];
             break;
             
             
@@ -247,6 +269,5 @@ public class PlayerUnitAnimation : MonoBehaviour
     }
 
     
-
 
 }

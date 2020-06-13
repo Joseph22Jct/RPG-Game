@@ -11,6 +11,7 @@ public class EnemyGroup : ScriptableObject
 
     public string Music;
     public string LowHPMusic;
+    public bool NoMusicAfterCombat;
 
     public AI Instructions;
 

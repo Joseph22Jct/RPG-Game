@@ -16,6 +16,7 @@ public class Consumables : ScriptableObject
     public bool multitarget; //if targets everyone in the party.
     public bool OverworldOnly;
     public int[] StatModifiers = new int[7];
+    public Actions BattleAction;
     
 
 }

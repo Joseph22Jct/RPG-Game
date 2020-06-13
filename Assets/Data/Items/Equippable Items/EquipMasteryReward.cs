@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName= "New Reward", menuName = "New Reward")]
+[CreateAssetMenu(fileName= "New Reward", menuName = "Items/New Reward")]
 public class EquipMasteryReward : ScriptableObject
 {
     

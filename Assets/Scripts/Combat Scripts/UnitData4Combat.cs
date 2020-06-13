@@ -21,10 +21,15 @@ public class UnitData4Combat : MonoBehaviour
     private int[] CurrentStatModifiersCD = new int[13];
     private bool isImmunetoNormal;
     Sprite currentSprite;
+    
 
     int UnitSide; //negative is enemy side, positive is player side. Set by the game management and shit, used for dynamic camera system.
+    public int slot;
 
-    int ABTBarCurrent;
+    float ABTBarCurrent;
+
+    float maxABTBar;
+    private Moves[] ThisMoves = new Moves[1];
 
     //initialize unit 
 
@@ -40,6 +45,8 @@ public class UnitData4Combat : MonoBehaviour
         name = Unit.getName();
         Name = Unit.getName();
         Description = Unit.getDescrition();
+
+        ThisMoves = Unit.GetMoves();
 
         CurrentStats = initialStats;
         CurrentElementResistances = initialElementResistances;
@@ -63,6 +70,7 @@ public class UnitData4Combat : MonoBehaviour
         CurrentStats = initialStats;
         CurrentElementResistances = initialElementResistances;
         CurrentstatusResistances = initialstatusResistances;
+        ThisMoves= enemydata.availableMoves;
 
 
         return this;

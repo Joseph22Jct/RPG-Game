@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Phases : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int type;
+    public int[] values = new int[8];
+    public int secondType;
+    public string TextDisplayed;
+    
+    public UnitData4Combat Caster;
 }

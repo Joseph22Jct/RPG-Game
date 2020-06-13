@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName= "New Equipment", menuName = "New Equipment")]
+[CreateAssetMenu(fileName= "New Equipment", menuName = "Items/New Equipment")]
 public class UsableEquipment : ScriptableObject
 {
     //Scriptable object, has an ID, name, stat increase, effect, weapon mastery exp limit (int) and Mastery Reward

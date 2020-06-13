@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd469961414aa46418ef32057e24085e, type: 3}
+  m_Name: ENEM_SLIME
+  m_EditorClassIdentifier: 
+  EnemyName: Slime
+  Description: A slimey foe that has a will of its own
+  element: 0
+  replaceColors: 0
+  colors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  BaseStats: 0f0000000f0000000200000005000000030000000600000007000000
+  innateStatusResistance:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  innateElementResistance:
+  - 0
+  - 0
+  - 0
+  - 0
+  immuneToNormal: 0
+  availableMoves:
+  - {fileID: 0}
+  enemySprites:
+  - {fileID: -7282886668606283007, guid: 059d9dff07a753f4fa8a411824d43d8b, type: 3}
+  - {fileID: 4518187702968751635, guid: 059d9dff07a753f4fa8a411824d43d8b, type: 3}
+  - {fileID: 7526866347251117655, guid: 059d9dff07a753f4fa8a411824d43d8b, type: 3}
+  - {fileID: 169598284321861141, guid: 059d9dff07a753f4fa8a411824d43d8b, type: 3}
+  - {fileID: -518775653469539935, guid: 059d9dff07a753f4fa8a411824d43d8b, type: 3}
+  - {fileID: -1066590377825042928, guid: 059d9dff07a753f4fa8a411824d43d8b, type: 3}
+  defaultAI: {fileID: 0}

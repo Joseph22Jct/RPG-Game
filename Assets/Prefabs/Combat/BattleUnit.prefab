@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943570184529330961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5085595913759155363}
@@ -304,7 +304,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7010747826674084519}
-  - component: {fileID: 1911352236693394062}
   m_Layer: 0
   m_Name: Player Sprites (Back)
   m_TagString: Untagged
@@ -320,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846255030603102018}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 7954844578931499487}
@@ -328,58 +327,6 @@ Transform:
   m_Father: {fileID: 8540530859664084391}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1911352236693394062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846255030603102018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd31458a446d81444881c50414a2fc55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Body: {fileID: 588302542726298556}
-  HeadGO: {fileID: 4377805843269125909}
-  Head: {fileID: 5650822796830793875}
-  HeadgearHolder: {fileID: 346809811079166977}
-  ChestHolder: {fileID: 8701190074992336775}
-  LegsHolder: {fileID: 4626030105332437866}
-  Equips:
-  - {fileID: 1366239842700036084}
-  - {fileID: 6786309597122987975}
-  - {fileID: 6305813552867647554}
-  - {fileID: 1884541244017343155}
-  Weapon: {fileID: 0}
-  Headgear: {fileID: 0}
-  WeaponObject: {fileID: 104279534703836136}
-  Chest: {fileID: 0}
-  Legs: {fileID: 0}
-  playerSpecies: {fileID: 0}
-  SouthWalking:
-  - {fileID: 3411425762186577264, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -3386248704897531617, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: 802266237331033680, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  NorthWalking:
-  - {fileID: 5102114070982450687, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: 6279727410571688914, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -6729128948375797764, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  EastWalking:
-  - {fileID: 7918512902349747559, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: 2475149114332413957, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -1091237169211529142, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  WestWalking:
-  - {fileID: 3707372965896869925, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -466137460074775756, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -159693739870023623, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  PrepAttack:
-  - {fileID: 2366784222654825437, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -6116566679544706733, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  BodyColors:
-  - {fileID: 3540370698223081990}
-  - {fileID: 8373540955512030971}
-  val: 0.7
 --- !u!1 &4037939039528352264
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4037939039528352264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5085595913759155363}
@@ -501,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4377805843269125909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1173462134939388029}
@@ -605,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6933667222002103030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7954844578931499487}
@@ -700,7 +647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540530859171313100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.04}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8540530860211137993}
@@ -779,6 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8540530859664084391}
   - component: {fileID: 5991360184377596385}
+  - component: {fileID: 1458381545259169432}
   m_Layer: 0
   m_Name: BattleUnit
   m_TagString: Untagged
@@ -816,6 +764,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: 
+  slot: 0
+--- !u!114 &1458381545259169432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540530859664084386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c206a37d2a336664c80305072ea48d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Body: {fileID: 8540530860211137992}
+  HeadGO: {fileID: 8540530859995447684}
+  Head: {fileID: 8540530859995447686}
+  HeadgearHolder: {fileID: 8540530860498914597}
+  ChestHolder: {fileID: 8540530859973033860}
+  LegsHolder: {fileID: 8540530859171313102}
+  BackBody: {fileID: 588302542726298556}
+  BackHeadGO: {fileID: 4377805843269125909}
+  BackHead: {fileID: 5650822796830793875}
+  BackHeadgearHolder: {fileID: 346809811079166977}
+  BackChestHolder: {fileID: 8701190074992336775}
+  BackLegsHolder: {fileID: 4626030105332437866}
+  Equips:
+  - {fileID: 8540530860174201685}
+  - {fileID: 8540530860498914596}
+  - {fileID: 6305813552867647554}
+  - {fileID: 8540530859171313089}
+  - {fileID: 1366239842700036084}
+  - {fileID: 6786309597122987975}
+  - {fileID: 8540530859973033863}
+  - {fileID: 1884541244017343155}
+  Weapon: {fileID: 0}
+  Headgear: {fileID: 0}
+  WeaponObject: {fileID: 8540530860174201680}
+  Chest: {fileID: 0}
+  Legs: {fileID: 0}
+  playerSpecies: {fileID: 0}
+  SouthWalking:
+  - {fileID: 3411425762186577264, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: -3386248704897531617, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: 802266237331033680, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  NorthWalking:
+  - {fileID: 5102114070982450687, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: 6279727410571688914, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: -6729128948375797764, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  EastWalking:
+  - {fileID: 7918512902349747559, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: 2475149114332413957, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: -1091237169211529142, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  WestWalking:
+  - {fileID: 3707372965896869925, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: -466137460074775756, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: -159693739870023623, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  PrepAttack:
+  - {fileID: 2366784222654825437, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  - {fileID: -6116566679544706733, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
+  BodyColors:
+  - {fileID: 8540530859995447929}
+  - {fileID: 8540530860211137995}
+  - {fileID: 3540370698223081990}
+  - {fileID: 8373540955512030971}
+  val: 0.3
 --- !u!1 &8540530859973033858
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540530859973033858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.005}
+  m_LocalPosition: {x: 0, y: 0, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8540530860211137993}
@@ -1224,7 +1237,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8540530860246260907}
-  - component: {fileID: 1875963454970511187}
   m_Layer: 0
   m_Name: Player Sprites
   m_TagString: Untagged
@@ -1240,7 +1252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540530860246260904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 8540530859995447687}
@@ -1248,58 +1260,6 @@ Transform:
   m_Father: {fileID: 8540530859664084391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1875963454970511187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8540530860246260904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd31458a446d81444881c50414a2fc55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Body: {fileID: 8540530860211137992}
-  HeadGO: {fileID: 8540530859995447684}
-  Head: {fileID: 8540530859995447686}
-  HeadgearHolder: {fileID: 8540530860498914597}
-  ChestHolder: {fileID: 8540530859973033860}
-  LegsHolder: {fileID: 8540530859171313102}
-  Equips:
-  - {fileID: 8540530860174201685}
-  - {fileID: 8540530860498914596}
-  - {fileID: 8540530859973033863}
-  - {fileID: 8540530859171313089}
-  Weapon: {fileID: 0}
-  Headgear: {fileID: 0}
-  WeaponObject: {fileID: 8540530860174201680}
-  Chest: {fileID: 0}
-  Legs: {fileID: 0}
-  playerSpecies: {fileID: 0}
-  SouthWalking:
-  - {fileID: 3411425762186577264, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -3386248704897531617, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: 802266237331033680, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  NorthWalking:
-  - {fileID: 5102114070982450687, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: 6279727410571688914, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -6729128948375797764, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  EastWalking:
-  - {fileID: 7918512902349747559, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: 2475149114332413957, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -1091237169211529142, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  WestWalking:
-  - {fileID: 3707372965896869925, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -466137460074775756, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -159693739870023623, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  PrepAttack:
-  - {fileID: 2366784222654825437, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  - {fileID: -6116566679544706733, guid: 2629f98208f441f4bad58e1bf32e7ea6, type: 3}
-  BodyColors:
-  - {fileID: 8540530859995447929}
-  - {fileID: 8540530860211137995}
-  val: 0.7
 --- !u!1 &8540530860498914595
 GameObject:
   m_ObjectHideFlags: 0
