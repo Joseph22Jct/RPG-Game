@@ -742,7 +742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540530859664084386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.84, y: -1.62, z: 0}
+  m_LocalPosition: {x: 1.84, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8540530860246260907}
@@ -764,7 +764,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: 
+  initialStats: 00000000000000000000000000000000000000000000000000000000
+  CurrentStats: 00000000000000000000000000000000000000000000000000000000
+  initialstatusResistances:
+  - 0
+  - 0
+  - 0
+  - 0
+  CurrentstatusResistances:
+  - 0
+  - 0
+  - 0
+  - 0
+  initialElementResistances:
+  - 0
+  - 0
+  - 0
+  - 0
+  CurrentElementResistances:
+  - 0
+  - 0
+  - 0
+  - 0
+  ChargeABTAllowed: 0
   slot: 0
+  ABTBarCurrent: 0
+  ABTRate: 0
+  maxABTBar: 0
 --- !u!114 &1458381545259169432
 MonoBehaviour:
   m_ObjectHideFlags: 0

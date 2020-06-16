@@ -155,7 +155,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable() {
         Anim = GetComponent<PlayerUnitAnimation>();
         
+        try{
         Anim.SetEquipment(0);
+        }catch{}
     }
 }
 

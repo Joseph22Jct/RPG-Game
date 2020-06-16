@@ -66,7 +66,7 @@ public class PlayerUnitAnimation : MonoBehaviour
     
 
     public void SetEquipment(int whichPlayer){
-
+        
         Weapon = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetWeapon().isEquip;
         Headgear = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetHead().isEquip;
         Chest = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[whichPlayer]].GetChest().isEquip;

@@ -25,7 +25,7 @@ public class BattleCameraMovements : MonoBehaviour
 
     void Start(){
         selfT = GetComponent<Transform>();
-        currentState = RotateConstantlyright;
+        currentState = DoNothing;
         CcState = CDoNothing;
     }
 

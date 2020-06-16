@@ -7,31 +7,40 @@ public class UnitData4Combat : MonoBehaviour
     // Start is called before the first frame update
     public string Name;
     public string Description;
-    private float currentHP;
-    private float currentMP;
-    private int status = -1;
-    private int[] initialStats = new int[7];
-    private int[] CurrentStats = new int[7];
-    private float[] initialstatusResistances = new float[4];
-    private float[] CurrentstatusResistances = new float[4];
-    private float[] initialElementResistances = new float[4];
-    private float[] CurrentElementResistances = new float[4];
+    public int currentHP;
+    public int currentMP;
+    public int status = -1;
+    public int[] initialStats = new int[7];
+    public int[] CurrentStats = new int[7];
+    public float[] initialstatusResistances = new float[4];
+    public float[] CurrentstatusResistances = new float[4];
+    public float[] initialElementResistances = new float[4];
+    public float[] CurrentElementResistances = new float[4];
 
     private int[] CurrentStatModifiers = new int[13];
     private int[] CurrentStatModifiersCD = new int[13];
     private bool isImmunetoNormal;
     Sprite currentSprite;
+    public bool ChargeABTAllowed = false;
+
+    private void Update() {
+        if(ChargeABTAllowed&& ABTBarCurrent<maxABTBar ){
+
+        }
+    }
     
 
     int UnitSide; //negative is enemy side, positive is player side. Set by the game management and shit, used for dynamic camera system.
     public int slot;
 
-    float ABTBarCurrent;
-
-    float maxABTBar;
+    public float ABTBarCurrent;
+    public float ABTRate;
+    public float maxABTBar;
     private Moves[] ThisMoves = new Moves[1];
 
     //initialize unit 
+
+
 
     public UnitData4Combat InitializeHero(int slot){
 

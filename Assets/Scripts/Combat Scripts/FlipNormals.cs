@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[ExecuteAlways]
+
 public class FlipNormals : MonoBehaviour
 {
     void Start () {
-		MeshFilter filter = GetComponent(typeof (MeshFilter)) as MeshFilter;
+		/*MeshFilter filter = GetComponent(typeof (MeshFilter)) as MeshFilter;
 		if (filter != null)
 		{
 			Mesh mesh = filter.sharedMesh;
@@ -26,6 +26,10 @@ public class FlipNormals : MonoBehaviour
 				}
 				mesh.SetTriangles(triangles, m);
 			}
-		}		
+		}	
+
+		Debug.Log("Flipped normals");	
+		*/
 	}
+	
 }

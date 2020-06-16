@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionAnimation : MonoBehaviour
+public abstract class ActionAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+    public float timeRequired;
+    public float time;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Update() {
+        time +=Time.deltaTime;
+        if(time == timeRequired){
+            //Alert Mediator
+        }
     }
 }

@@ -81,12 +81,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 1, b: 1, a: 1}
-    - _Color2: {r: 1, g: 1, b: 1, a: 1}
-    - _Color3: {r: 1, g: 1, b: 1, a: 1}
-    - _Color4: {r: 1, g: 1, b: 1, a: 1}
-    - _Color5: {r: 1, g: 1, b: 1, a: 1}
-    - _Color6: {r: 1, g: 1, b: 1, a: 1}
-    - _Color7: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.033333335, g: 0.13333333, b: 0.06666667, a: 1}
+    - _Color2: {r: 0.09, g: 0.28, b: 0.13, a: 1}
+    - _Color3: {r: 0.1, g: 0.7, b: 0.2, a: 1}
+    - _Color4: {r: 0.31, g: 0.7, b: 0.41, a: 1}
+    - _Color5: {r: 0.75, g: 1, b: 0.55, a: 1}
+    - _Color6: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+    - _Color7: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _Color8: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
