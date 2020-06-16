@@ -12,6 +12,17 @@ public class BattleManager : MonoBehaviour
     float ActiveTimeTimer;
     float timeaddmult;
 
+    private static BattleManager _instance;
+    public static BattleManager Instance{
+        get{
+            
+            return _instance;
+        }
+    }
+    private void Awake() {
+        _instance = this;
+    }
+
     public BattleUnitDataUI[] BUI = new BattleUnitDataUI[4];
 
     Queue<BattleEvents> BattleQueue = new Queue<BattleEvents>();
@@ -31,7 +42,7 @@ public class BattleManager : MonoBehaviour
 
     List<UnitData4Combat> UnitData = new List<UnitData4Combat>();
 
-    void Start(){
+    void OnEnable(){
 
         currentState = SetUpBattle;
 
@@ -146,6 +157,8 @@ public class BattleManager : MonoBehaviour
         if(BattleQueue.Count!=0){
             //Register battle.
         }
+
+        
     }
 
 

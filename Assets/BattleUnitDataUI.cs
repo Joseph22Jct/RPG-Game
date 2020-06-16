@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class BattleUnitDataUI : MonoBehaviour
 {
+
+    public Sprite StatBarHolder;
+    public Sprite fullBarHolder;
     Image thisImage;
     Material shader;
     int thisslot;
@@ -20,7 +23,7 @@ public class BattleUnitDataUI : MonoBehaviour
     
     public void InitializeHero(UnitData4Combat unit){
         thisImage = GetComponent<Image>();
-        shader = thisImage.material;
+        shader = new Material(Shader.Find("Custom/PaletteSwapEquip"));
         thisslot = unit.slot;
         thisUnit = unit;
         Colorpick = GameplayPartyManager.Instance.PartyMembers[GameplayPartyManager.Instance.CurrentParty[thisslot]].GetColor();
@@ -30,23 +33,29 @@ public class BattleUnitDataUI : MonoBehaviour
         color3 = new Color(Colorpick.r, Colorpick.g, Colorpick.b,Colorpick.a); //Main Body
 
         if(Colorpick.r>=Colorpick.g && Colorpick.r >= Colorpick.b){
-            color4 = new Color(Colorpick.r, Colorpick.g+(Colorpick.r*0.3f), Colorpick.b+(Colorpick.r*0.3f),Colorpick.a); // Secondary Color
-            color5 = new Color(1, Colorpick.g+Colorpick.r/2, Colorpick.b+Colorpick.r/2,Colorpick.a); //Highlights
+            color4 = new Color(Colorpick.r-0.1f, Colorpick.g+(Colorpick.r*0.3f)-0.1f, Colorpick.b+(Colorpick.r*0.3f)-0.1f,Colorpick.a); // Secondary Color
+            color5 = new Color(1, Colorpick.g+Colorpick.r/2-0.1f, Colorpick.b+Colorpick.r/2-0.1f,Colorpick.a); //Highlights
         }
 
         else if(Colorpick.b>=Colorpick.r && Colorpick.b >= Colorpick.g){
-            color4 = new Color(Colorpick.r+(Colorpick.b*0.3f), Colorpick.g+(Colorpick.b*0.3f), Colorpick.b,Colorpick.a); 
-            color5 = new Color(Colorpick.b+Colorpick.r/2, Colorpick.g+Colorpick.b/2, 1,Colorpick.a);
+            color4 = new Color(Colorpick.r+(Colorpick.b*0.3f)-0.1f, Colorpick.g+(Colorpick.b*0.3f)-0.1f, Colorpick.b-0.1f,Colorpick.a); 
+            color5 = new Color(Colorpick.b+Colorpick.r/2-0.1f, Colorpick.g+Colorpick.b/2-0.1f, 1,Colorpick.a);
         }
         else if (Colorpick.g>=Colorpick.r && Colorpick.g >= Colorpick.b){
-            color4 = new Color(Colorpick.r+(Colorpick.g*0.3f), Colorpick.g, Colorpick.b+(Colorpick.g*0.3f),Colorpick.a); 
-            color5 = new Color(Colorpick.g+Colorpick.r/2, 1, Colorpick.b+Colorpick.g/2,Colorpick.a);
+            color4 = new Color(Colorpick.r+(Colorpick.g*0.3f)-0.1f, Colorpick.g-0.1f, Colorpick.b+(Colorpick.g*0.3f)-0.1f,Colorpick.a); 
+            color5 = new Color(Colorpick.g+Colorpick.r/2-0.1f, 1, Colorpick.b+Colorpick.g/2-0.1f,Colorpick.a);
         }
 
 
          
          color6 = new Color(0.9f, 0.9f, 0.9f,Colorpick.a); //eye whites
 
+
+        shader.SetFloat("_ColorPick1", 0.2f);
+        shader.SetFloat("_ColorPick2", 0.4f);
+        shader.SetFloat("_ColorPick3", 0.6f);
+        shader.SetFloat("_ColorPick4", 0.7f);
+        shader.SetFloat("_ColorPick5", 0.8f);
         shader.SetColor("_Color1",color1);
         shader.SetColor("_Color2",color2);
         shader.SetColor("_Color3",color3);
@@ -55,11 +64,14 @@ public class BattleUnitDataUI : MonoBehaviour
         shader.SetColor("_Color6",color6);
         Debug.Log("UIColor Updated");
 
+        thisImage.material = shader;
+
         BUIT[0].UpdateName(unit.Name);
         BUIT[1].UpdateBar(unit.currentHP, unit.initialStats[0]);
         BUIT[2].UpdateBar(unit.currentMP, unit.initialStats[1]);
         BUIT[3].UpdateBarOnly(0,1);
 
+        
         
     }
 
@@ -71,5 +83,12 @@ public class BattleUnitDataUI : MonoBehaviour
     }
     public void UpdateABT(){
         BUIT[3].UpdateBarOnly(thisUnit.ABTBarCurrent, thisUnit.maxABTBar);
+
+        if(thisUnit.ABTBarCurrent>= thisUnit.maxABTBar){
+            thisImage.sprite = fullBarHolder;
+
+        }
+        else thisImage.sprite = StatBarHolder;
+
     }
 }

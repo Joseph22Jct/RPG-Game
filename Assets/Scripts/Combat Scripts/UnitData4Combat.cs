@@ -25,7 +25,10 @@ public class UnitData4Combat : MonoBehaviour
 
     private void Update() {
         if(ChargeABTAllowed&& ABTBarCurrent<maxABTBar ){
+            ABTBarCurrent += ABTRate*Time.deltaTime;
 
+            if(slot<4)
+            BattleManager.Instance.BUI[slot].UpdateABT();
         }
     }
     
@@ -37,6 +40,7 @@ public class UnitData4Combat : MonoBehaviour
     public float ABTRate;
     public float maxABTBar;
     private Moves[] ThisMoves = new Moves[1];
+    
 
     //initialize unit 
 

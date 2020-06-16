@@ -59,7 +59,7 @@ Material:
     - _BumpScale: 1
     - _ColorPick1: 0.1
     - _ColorPick2: 0.2
-    - _ColorPick3: 0.3
+    - _ColorPick3: 0
     - _ColorPick4: 0.4
     - _ColorPick5: 0.5
     - _ColorPick6: 0.6
@@ -81,12 +81,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.033333335, g: 0.13333333, b: 0.06666667, a: 1}
-    - _Color2: {r: 0.09, g: 0.28, b: 0.13, a: 1}
-    - _Color3: {r: 0.1, g: 0.7, b: 0.2, a: 1}
+    - _Color1: {r: 1, g: 0.2699787, b: 0, a: 1}
+    - _Color2: {r: 0.078987196, g: 0.23584908, b: 0.11166675, a: 1}
+    - _Color3: {r: 0, g: 0.4528302, b: 0.3691039, a: 1}
     - _Color4: {r: 0.31, g: 0.7, b: 0.41, a: 1}
     - _Color5: {r: 0.75, g: 1, b: 0.55, a: 1}
-    - _Color6: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-    - _Color7: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+    - _Color6: {r: 0.5849056, g: 0.43867922, b: 0.43867922, a: 1}
+    - _Color7: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
     - _Color8: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
