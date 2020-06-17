@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class OverworldEnemyScript : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class OverworldEnemyScript : MonoBehaviour
 
     public EnemyGroup theGroup;
     private void OnTriggerEnter2D(Collider2D other) {
-        LeanTween.move(gameObject, Player.transform.position, 4);
+        
+        transform.DOMove(Player.transform.position, 4);
+        //gameObject.transform.move(gameObject, Player.transform.position, 4);
     }
     private void OnCollisionEnter2D(Collision2D other) {
         

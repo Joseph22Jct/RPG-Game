@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PopUpAnimationSequence : MonoBehaviour
 {
@@ -9,12 +10,14 @@ public class PopUpAnimationSequence : MonoBehaviour
     float timepassed;
     // Start is called before the first frame update
     private void Awake() {
-        LeanTween.rotate(this.gameObject, new Vector3(0,0,0), 0.5f);
+
+        transform.DORotate(new Vector3(0,0,0), 0.5f);
+        //LeanTween.rotate(this.gameObject, new Vector3(0,0,0), 0.5f);
     }
 
     // Update is called once per frame
     
-    LTDescr animatio;
+
     private void OnMouseDown() {
         finish();
    
@@ -28,7 +31,8 @@ public class PopUpAnimationSequence : MonoBehaviour
         }
     }
     void finish(){
-        LeanTween.rotate(this.gameObject, new Vector3(0,90,0),0.5f).setOnComplete(end);
+        //LeanTween.rotate(this.gameObject, new Vector3(0,90,0),0.5f).setOnComplete(end);
+        transform.DORotate(new Vector3(0,90,0), 0.5f).OnStepComplete(end);
         PlayerMovement.Instance.StopMoving();
     }
     void end(){
