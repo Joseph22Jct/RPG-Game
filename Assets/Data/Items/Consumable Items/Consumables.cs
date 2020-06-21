@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName= "New Consumable", menuName = "New Consumable")]
+[CreateAssetMenu(fileName= "New Consumable", menuName = "Items/New Consumable")]
 public class Consumables : ScriptableObject
 {
     public int ConsumableType; //0 HP Healing or mana, 1= Battle Items

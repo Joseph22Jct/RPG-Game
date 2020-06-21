@@ -31,6 +31,8 @@ public class UnitData4Combat : MonoBehaviour
             BattleManager.Instance.BUI[slot].UpdateABT();
         }
     }
+
+    int element;
     
 
     int UnitSide; //negative is enemy side, positive is player side. Set by the game management and shit, used for dynamic camera system.
@@ -58,6 +60,8 @@ public class UnitData4Combat : MonoBehaviour
         name = Unit.getName();
         Name = Unit.getName();
         Description = Unit.getDescrition();
+        element = Unit.GetWeapon().isEquip.ElementalType;
+    
 
         ThisMoves = Unit.GetMoves();
 
@@ -79,6 +83,8 @@ public class UnitData4Combat : MonoBehaviour
         name = enemydata.EnemyName;
         Name = enemydata.EnemyName;
         Description = enemydata.Description;
+
+        element = enemydata.element;
 
         CurrentStats = initialStats;
         CurrentElementResistances = initialElementResistances;

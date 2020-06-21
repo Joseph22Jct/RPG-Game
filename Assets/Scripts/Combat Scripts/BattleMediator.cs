@@ -23,5 +23,16 @@ public class BattleMediator : MonoBehaviour
         }
         
     }
+
+    public int[] targets = new int[12];
+    public int initiator;
+
+    public int moveAccuracy;
+
+    public int[] GetTargets(){
+        return targets;
+    }
+
+    BattleEvents currentEvent;
     
 }

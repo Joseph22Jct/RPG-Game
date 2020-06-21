@@ -40,7 +40,9 @@ public class BattleManager : MonoBehaviour
     
     [SerializeField] List<GameObject> PUnits = new List<GameObject>();
 
-    List<UnitData4Combat> UnitData = new List<UnitData4Combat>();
+    public List<UnitData4Combat> UnitData = new List<UnitData4Combat>();
+
+     public Queue<Phases> listOfPhases = new Queue<Phases>();
 
     void OnEnable(){
 
@@ -150,15 +152,48 @@ public class BattleManager : MonoBehaviour
             UnitData[i].ChargeABTAllowed = true;
         }
 
-        currentState = Battle;
+        currentState = BattleWait;
     }
 
-    public void Battle(){
+    public void BattleWait(){
         if(BattleQueue.Count!=0){
             //Register battle.
         }
 
         
+    }
+
+    BattleEvents CurrentEvent;
+    Phases CurrentPhase;
+    public void ExecuteEvent(){
+        if(CurrentEvent == null)
+        CurrentEvent = BattleQueue.Dequeue();
+        CurrentEvent.thisAction.Effect();
+        if(listOfPhases.Count >0){
+        CurrentPhase = listOfPhases.Dequeue();
+        switch(CurrentPhase.showntype){
+            case 0: //Animation?
+            break;
+            case 1: //Attack
+            break;
+            case 2: //Heal
+            break; 
+            case 3: //Status Recover
+            break;
+            case 4: //Inflict Status
+            break;
+            case 5: //Resurrect
+            break;
+
+            //Add the rest.
+            default: break;
+
+        }
+        }
+        else{
+            CurrentEvent = null;
+            currentState = BattleWait;
+        }
     }
 
 
