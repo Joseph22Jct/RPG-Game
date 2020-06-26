@@ -27,6 +27,8 @@ public class BattleMediator : MonoBehaviour
     public int[] targets = new int[12];
     public int initiator;
 
+    public int initelement;
+
     public int moveAccuracy;
 
     public int[] GetTargets(){

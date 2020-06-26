@@ -19,7 +19,48 @@ public class PlayableUnit
     float[] innateElementRes = new float[4]; //Carries percentage resistance to status effects.
     float[] FinalElementRes = new float[4];
 
-    Moves[] AvailableMoves = new Moves[1];
+    Moves[] EquippedMoves = new Moves[8];
+
+    [SerializeField] Dictionary<int, Moves> CurrentMoves = new Dictionary<int, Moves>();
+
+    public void giveMove(Moves move){
+        
+        
+       
+        if(!CurrentMoves.ContainsKey(move.ID)){
+             CurrentMoves.Add(move.ID, move);
+              Debug.Log("Given Move: " + move.Name);  
+
+              for(int i = 0; i<EquippedMoves.Length; i++){
+                  if(EquippedMoves[i] = null){
+                      EquippedMoves[i] = move;
+                      break;
+                  }
+              }
+        }
+        
+    
+
+        //DebugInventory();
+
+    }
+
+    public void EquipMove(int slot, Moves move){
+        EquippedMoves[slot] = move;
+    }
+
+    public void UnequipMove(int slot){
+
+        EquippedMoves[slot] = null;
+        for(int i = slot; i<EquippedMoves.Length; i++){
+            if(EquippedMoves[i+1] == null){
+                break;
+            }
+            else{
+                EquippedMoves[i] = EquippedMoves[i+1];
+            }
+        }
+    }
 
     int CurrentHP;
     int CurrentMP;
@@ -73,8 +114,12 @@ public class PlayableUnit
 
     }
 
-    public Moves[] GetMoves(){
-        return AvailableMoves;
+    public Moves[] GetEquippedMoves(){
+        return EquippedMoves;
+    }
+
+    public Dictionary<int, Moves> GetAllMoves(){
+        return CurrentMoves;
     }
 
     public Color GetColor(){

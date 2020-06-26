@@ -63,7 +63,7 @@ public class UnitData4Combat : MonoBehaviour
         element = Unit.GetWeapon().isEquip.ElementalType;
     
 
-        ThisMoves = Unit.GetMoves();
+        ThisMoves = Unit.GetEquippedMoves();
 
         CurrentStats = initialStats;
         CurrentElementResistances = initialElementResistances;

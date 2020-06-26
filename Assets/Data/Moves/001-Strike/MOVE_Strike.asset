@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac903afe5836b544ab0dc481f7409272, type: 3}
   m_Name: MOVE_Strike
   m_EditorClassIdentifier: 
+  Name: Strike
+  Description: Strike with your weapon!
+  Icon: {fileID: 546683024548441455, guid: 9f3b761ee19a1fd4d929496f78ec894a, type: 3}
   BattleAction: {fileID: 11400000, guid: 53b370ef398ee834d83c6c9ff7c9fdf4, type: 2}
   MPCost: 0
   ID: 1

@@ -17,7 +17,10 @@ public class ACT_Strike : Actions
             if(targets[i]!= -1){
 
                 if(Random.Range(0,1) < (float)BattleMediator.Instance.moveAccuracy /100){
-                    targets[i] = (BattleManager.Instance.UnitData[BattleMediator.Instance.initiator].CurrentStats[2]- BattleManager.Instance.UnitData[i].CurrentStats[3] ) *3;
+                    targets[i] = (int) ((float) 
+                    (BattleManager.Instance.UnitData[BattleMediator.Instance.initiator].CurrentStats[2]- BattleManager.Instance.UnitData[i].CurrentStats[3] ) //Attack vs Defense
+                    *3  //Damage multiplier
+                    * (BattleManager.Instance.UnitData[i].CurrentElementResistances[BattleMediator.Instance.initelement]+100/100)); //Element
                 }
                 else{
                     targets[i] = -2; //missed

@@ -15,6 +15,8 @@ public class GameplayPartyManager : MonoBehaviour
             return _instance;
         }
     }
+
+    public Moves defaultMoves;
     
 
     public Species defaultSpecies;
@@ -38,6 +40,8 @@ public class GameplayPartyManager : MonoBehaviour
         newUnit.SetSpecies(defaultSpecies);
         newUnit.setColor(0.5f, 0.6f,0.7f);
         newUnit.setStatsAfterEquipment();
+        newUnit.giveMove(defaultMoves);
+        
         PartyMembers.Add(newUnit);
         
         newUnit = new PlayableUnit().MakeNewUnit();
@@ -47,7 +51,9 @@ public class GameplayPartyManager : MonoBehaviour
         newUnit.setColor(0.7f, 0.3f,0.3f);
         newUnit.SetSpecies(defaultSpecies);
         newUnit.setStatsAfterEquipment();
+        newUnit.giveMove(defaultMoves);
         PartyMembers.Add(newUnit);
+        
 
         newUnit = new PlayableUnit().MakeNewUnit();
 
@@ -61,6 +67,7 @@ public class GameplayPartyManager : MonoBehaviour
         newUnit.SetSpecies(defaultSpecies);
         newUnit.setStatsAfterEquipment();
         newUnit.addCurrentHP(-5);
+        newUnit.giveMove(defaultMoves);
         PartyMembers.Add(newUnit);
 
         newUnit = new PlayableUnit().MakeNewUnit();
@@ -72,6 +79,7 @@ public class GameplayPartyManager : MonoBehaviour
         newUnit.setColor(0.1f, 0.7f,0.2f);
         newUnit.SetSpecies(defaultSpecies);
         newUnit.setStatsAfterEquipment();
+        newUnit.giveMove(defaultMoves);
         PartyMembers.Add(newUnit);
 
         CurrentParty[0] = 0;

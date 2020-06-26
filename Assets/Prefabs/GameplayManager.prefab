@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27de2c955a4632644b300a8dbdaa8406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMoves: {fileID: 11400000, guid: b2371bb643322ab4ca33803536df540a, type: 2}
   defaultSpecies: {fileID: 11400000, guid: ab2a3f990ebddb146973e85663035fb9, type: 2}
   DefaultItems:
   - {fileID: 11400000, guid: a47397a3245f7ee4a857068ad0badb55, type: 2}
