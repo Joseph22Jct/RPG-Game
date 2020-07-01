@@ -18,9 +18,9 @@ MonoBehaviour:
   BattleAction: {fileID: 11400000, guid: 53b370ef398ee834d83c6c9ff7c9fdf4, type: 2}
   MPCost: 0
   ID: 1
-  HPCost: 0
+  HPCost: 1
   HPPercentCost: 0
   OverworldEffect: {fileID: 0}
+  WeaponTypesAllowed: 00000000
   targets: 010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  whichsidetoTarget: 0
-  anim: {fileID: 0}
+  TargetAllies: 0

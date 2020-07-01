@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class BattleAnimationManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private static BattleAnimationManager _instance;
+    public static BattleAnimationManager Instance{
+        get{
+            
+            
+            return _instance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Awake() {
+        _instance = this;
     }
+
+    public void PlayAnimation(){
+        //Play Animation from animation script.
+
+        //Animation Id check, if already played, just use the one that was already spawned, otherwise instanciate it.
+    }
+
+    
+
+    
 }

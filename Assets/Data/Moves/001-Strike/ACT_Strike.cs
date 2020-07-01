@@ -6,6 +6,10 @@ public class ACT_Strike : Actions
 {   
 
     public override void Effect(){
+
+        List<AnimationStep> AnimationSteps = new List<AnimationStep>();
+        AnimationSteps.Add(new AnimationStep().MoveCamera(0, CameraAnchors.Instance.PlayerSide, CameraAnchors.Instance.EnemySide,3,0.1f));
+
         int[] targets = BattleMediator.Instance.GetTargets();
 
             string messagestart = BattleManager.Instance.UnitData[BattleMediator.Instance.initiator].Name + " struck...";
@@ -28,11 +32,15 @@ public class ACT_Strike : Actions
 
             }
         }
+
+    
         
         Queue<Phases> listOfPhases = new Queue<Phases>();
-        listOfPhases.Enqueue(new Phases(1, messagestart, targets));
+        listOfPhases.Enqueue(new Phases(0, messagestart, targets));
+        listOfPhases.Enqueue(new Phases(1, "", targets));
 
         BattleManager.Instance.listOfPhases = listOfPhases;
+        BattleManager.Instance.Animations = AnimationSteps;
         
 
         

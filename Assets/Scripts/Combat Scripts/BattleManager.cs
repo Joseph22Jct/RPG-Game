@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BattleManager : MonoBehaviour
 {
@@ -38,13 +39,18 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] List<UnitData4Combat> EnemyUnits = new List<UnitData4Combat>();
     
-    [SerializeField] List<GameObject> PUnits = new List<GameObject>();
+    [SerializeField] public List<GameObject> PUnits = new List<GameObject>();
 
     public List<UnitData4Combat> UnitData = new List<UnitData4Combat>();
 
      public Queue<Phases> listOfPhases = new Queue<Phases>();
 
     void OnEnable(){
+        BattleEvents debugEvent = new BattleEvents();
+        debugEvent.Caster = 0;
+        debugEvent.thisAction = new ACT_Strike();
+        debugEvent.targets[4] = 1;
+        BattleQueue.Enqueue(debugEvent);
 
         currentState = SetUpBattle;
 
@@ -158,6 +164,7 @@ public class BattleManager : MonoBehaviour
     public void BattleWait(){
         if(BattleQueue.Count!=0){
             //Register battle.
+            currentState = ExecuteEvent;
         }
 
         
@@ -172,9 +179,16 @@ public class BattleManager : MonoBehaviour
         if(listOfPhases.Count >0){
         CurrentPhase = listOfPhases.Dequeue();
         switch(CurrentPhase.showntype){
-            case 0: //Animation?
+            case 0: //Animation
+            AnimCount = 0;
+            AnimTime = 0;
+            CurrentAnim = Animations[0];
+            currentState = AnimationPhase;
+
             break;
             case 1: //Attack
+            currentState = DamageDealt;
+
             break;
             case 2: //Heal
             break; 
@@ -195,6 +209,62 @@ public class BattleManager : MonoBehaviour
             currentState = BattleWait;
         }
     }
+
+    public List<AnimationStep> Animations = new List<AnimationStep>();
+    public AnimationStep CurrentAnim;
+    int AnimCount;
+    float AnimTime;
+    public void AnimationPhase(){
+        AnimTime+= Time.deltaTime;
+        
+
+        if (AnimTime>= CurrentAnim.Timer){ // Execute when timer hits
+        
+
+        switch(CurrentAnim.typeOfAnimation){
+            case 0: //MoveCamera
+            BattleCamera.Instance.MoveCamera(CurrentAnim.TargetT.position, CurrentAnim.speed, CurrentAnim.ObjLookAt.transform.position);
+
+            break;
+            case 1: //Movechar
+            break;
+            case 2: //PlayParticleEffect
+            break; 
+            case 3: //Change Frame
+            break;
+
+            case -1: //End
+            currentState = ExecuteEvent;
+            break;
+            
+
+            //Add the rest.
+            default: break;
+
+        }
+        AnimCount++;
+        CurrentAnim = Animations[AnimCount];
+        
+            
+        }
+        
+
+    }
+
+    public void DamageDealt(){
+
+        for (int i = 0; i<PUnits.Count; i++){
+
+            if(CurrentPhase.targets[i] > 0)
+            PUnits[i].transform.DOLocalMoveX(PUnits[i].transform.position.x, 1).SetEase(Ease.InOutSine);
+
+        }
+
+        currentState = ExecuteEvent;
+
+    }
+
+
 
 
 //Set up Finite State Machine

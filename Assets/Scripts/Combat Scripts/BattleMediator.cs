@@ -31,6 +31,8 @@ public class BattleMediator : MonoBehaviour
 
     public int moveAccuracy;
 
+    
+
     public int[] GetTargets(){
         return targets;
     }

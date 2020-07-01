@@ -6,7 +6,7 @@ public class BattleEvents : MonoBehaviour //What if this were Battle Events Inst
 {
 
     public int[] targets = new int[12];
-    public UnitData4Combat Caster;
+    public int Caster;
     public Actions thisAction;
 }
 

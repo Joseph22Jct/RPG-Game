@@ -21,5 +21,5 @@ public class Moves : ScriptableObject
 
     public int[] targets = new int[12];
     public bool TargetAllies; //0 for enemy
-    public GameObject anim;
+
 }
