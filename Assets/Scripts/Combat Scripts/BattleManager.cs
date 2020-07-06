@@ -26,7 +26,7 @@ public class BattleManager : MonoBehaviour
 
     public BattleUnitDataUI[] BUI = new BattleUnitDataUI[4];
 
-    Queue<BattleEvents> BattleQueue = new Queue<BattleEvents>();
+    public Queue<BattleEvents> BattleQueue = new Queue<BattleEvents>();
 
    
 
@@ -46,11 +46,7 @@ public class BattleManager : MonoBehaviour
      public Queue<Phases> listOfPhases = new Queue<Phases>();
 
     void OnEnable(){
-        BattleEvents debugEvent = new BattleEvents();
-        debugEvent.Caster = 0;
-        debugEvent.thisAction = new ACT_Strike();
-        debugEvent.targets[4] = 1;
-        BattleQueue.Enqueue(debugEvent);
+       
 
         currentState = SetUpBattle;
 
@@ -175,7 +171,7 @@ public class BattleManager : MonoBehaviour
     public void ExecuteEvent(){
         if(CurrentEvent == null)
         CurrentEvent = BattleQueue.Dequeue();
-        CurrentEvent.thisAction.Effect();
+        CurrentEvent.thisMove.BattleAction.Effect();
         if(listOfPhases.Count >0){
         CurrentPhase = listOfPhases.Dequeue();
         switch(CurrentPhase.showntype){

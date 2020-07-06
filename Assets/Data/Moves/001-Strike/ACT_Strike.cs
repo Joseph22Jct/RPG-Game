@@ -18,7 +18,7 @@ public class ACT_Strike : Actions
 
         for(int i = 0; i<12; i++){
             
-            if(targets[i]!= -1){
+            if(targets[i]>=0){
 
                 if(Random.Range(0,1) < (float)BattleMediator.Instance.moveAccuracy /100){
                     targets[i] = (int) ((float) 

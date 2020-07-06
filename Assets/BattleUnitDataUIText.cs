@@ -19,6 +19,8 @@ public class BattleUnitDataUIText : MonoBehaviour
         bar.transform.localScale = new Vector3((float)number/max, 1,1);
     }
     public void UpdateBarOnly(float number, float max){
+        if(number>0)
         bar.transform.localScale = new Vector3(number/max, 1,1);
+        else bar.transform.localScale = new Vector3(0, 1,1);;
     }
 }

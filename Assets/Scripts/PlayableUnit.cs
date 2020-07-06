@@ -32,8 +32,10 @@ public class PlayableUnit
               Debug.Log("Given Move: " + move.Name);  
 
               for(int i = 0; i<EquippedMoves.Length; i++){
-                  if(EquippedMoves[i] = null){
+                  
+                  if(EquippedMoves[i] == null){
                       EquippedMoves[i] = move;
+                      Debug.Log(EquippedMoves[i].Name);
                       break;
                   }
               }
