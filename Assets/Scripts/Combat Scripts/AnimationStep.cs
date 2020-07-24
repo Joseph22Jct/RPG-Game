@@ -18,11 +18,10 @@ public class AnimationStep : MonoBehaviour
     public int Particle;
     public float Timer;
     public float HowLong;
-    public AnimationStep MoveCamera(int TypeOfMovement, Transform TargetTransform, Transform ObjectToLookAt, float Speed, float timer){
+    public AnimationStep MoveCamera(int TypeOfMovement, float Speed, float timer){
         typeOfAnimation = 0;
         typeOfMovement = TypeOfMovement;
-        TargetT= TargetTransform;
-        ObjLookAt = ObjectToLookAt;
+        
         speed = Speed;
         Timer = timer;
         

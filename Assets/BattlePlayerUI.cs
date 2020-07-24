@@ -16,7 +16,7 @@ public class BattlePlayerUI : MonoBehaviour
         _instance = this;
     }
 
-    public bool[] PlayerTurnReady = new bool[4];
+    public Queue<int> PlayerTurnReady = new Queue<int>();
     public int[] CurrentBuildUps = new int[4];
 
     int Currentslot = -1;
@@ -28,15 +28,15 @@ public class BattlePlayerUI : MonoBehaviour
     [SerializeField] GameObject TargetMenu;
 
     private void Update() {
-        if(ActiveMenu ==true && Currentslot == -1){
-        for (int i =0; i< PlayerTurnReady.Length; i++){
-            if(PlayerTurnReady[i] ==true){
-            FirstMenu.SetActive(true);
-            Currentslot = i;
+        if(PlayerTurnReady.Count!=0 && ActiveMenu == false){
+        
             
-            break;
-            }
-        }
+            FirstMenu.SetActive(true);
+            Currentslot = PlayerTurnReady.Dequeue();
+            ActiveMenu = true;
+            
+            
+        
         }
         
         
@@ -60,6 +60,7 @@ public class BattlePlayerUI : MonoBehaviour
                 commands[i].SkillName[0].text = availableMoves[i].Name;
                 commands[i].SkillName[1].text = availableMoves[i].Name;
                 commands[i].icon.sprite = availableMoves[i].Icon;
+                commands[i].thisMove = availableMoves[i];
                 if(availableMoves[i].HPCost !=0){
                 commands[i].HPCost.gameObject.SetActive(true);
                 commands[i].ManaCost.gameObject.SetActive(false);
@@ -94,8 +95,13 @@ public class BattlePlayerUI : MonoBehaviour
         targets = TargetMenu.GetComponentsInChildren<TargetButtonInformationScript>();
         for(int i = 0; i<targets.Length; i++){
             try{
+                if(BattleManager.Instance.PUnits[i] != null){
                 targets[i].gameObject.SetActive(true);
                 targets[i].slot = i;
+                }
+                else{
+                    targets[i].gameObject.SetActive(false);
+                }
             
             
             }catch{
@@ -115,11 +121,11 @@ public class BattlePlayerUI : MonoBehaviour
 
 
     public void UpdateTargetUI(){
-
+        TargetstoSend = new int[12];
         targets[selected].thisButton.image.color = new Color(1,0.9f,0.9f);
         int targetcenter = 0;
         for(int i = 0; i<targets.Length; i++){
-            if(selectedMove.targets[i] ==i){
+            if(selectedMove.targets[i] ==1){
                 targetcenter = i;
                 break;
                 
@@ -146,12 +152,22 @@ public class BattlePlayerUI : MonoBehaviour
         }
 
         for(int i = 0; i<targets.Length; i++){
-            if(TargetstoSend[i] == 0)
+
+            targets[i].thisButton.onClick.RemoveAllListeners();
+            
+            Debug.Log("Working");
+            if(TargetstoSend[i] == 0){
             targets[i].thisButton.image.color = new Color(0.9f,0.9f,0.9f);
-            else if(TargetstoSend[i] == 1)
+            targets[i].thisButton.onClick.AddListener(targets[i].Selected);
+            }
+            else if(TargetstoSend[i] == 1){
             targets[i].thisButton.image.color = new Color(1f,0.9f,0.9f);
-            else if(TargetstoSend[i] == 2)
+            targets[i].thisButton.onClick.AddListener(ConfirmActive);
+            }
+            else if(TargetstoSend[i] == 2){
             targets[i].thisButton.image.color = new Color(1,1,1);
+            targets[i].thisButton.onClick.AddListener(targets[i].Selected);
+            }
         }
 
         ConfirmButton.SetActive(true);
@@ -159,14 +175,27 @@ public class BattlePlayerUI : MonoBehaviour
     
 
     public void ConfirmActive(){
+        ActiveMenu = false;
+        for(int i = 0; i<targets.Length; i++){
+            targets[i].thisButton.image.color = new Color(0.9f,0.9f,0.9f);
+            targets[i].thisButton.onClick.RemoveAllListeners();
+            targets[i].thisButton.onClick.AddListener(targets[i].Selected);
+            
+        }
         ConfirmButton.SetActive(false);
         TargetMenu.SetActive(false);
         FirstMenu.SetActive(false);
+        BattleManager.Instance.UnitData[Currentslot].ABTBarCurrent = 0;
+        
+        
+        
         BattleEvents enque = new BattleEvents();
+        enque.selectedTarget = Currentslot;
         enque.targets = TargetstoSend;
         enque.Caster = Currentslot;
         enque.thisMove = selectedMove;
         BattleManager.Instance.BattleQueue.Enqueue(enque);
+        Currentslot = -1;
     }
 
 

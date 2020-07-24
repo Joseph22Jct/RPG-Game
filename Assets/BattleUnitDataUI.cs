@@ -86,8 +86,8 @@ public class BattleUnitDataUI : MonoBehaviour
 
         if(thisUnit.ABTBarCurrent>= thisUnit.maxABTBar){
             thisImage.sprite = fullBarHolder;
-            BattlePlayerUI.Instance.ActiveMenu = true;
-            BattlePlayerUI.Instance.PlayerTurnReady[thisslot] = true;
+            
+            BattlePlayerUI.Instance.PlayerTurnReady.Enqueue(thisslot);
 
         }
         else thisImage.sprite = StatBarHolder;

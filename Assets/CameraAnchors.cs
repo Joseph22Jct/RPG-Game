@@ -20,6 +20,7 @@ public class CameraAnchors : MonoBehaviour
 
     public Vector3 GetPositionOfUnit(int slot){
         Transform t = BattleManager.Instance.PUnits[slot].GetComponent<Transform>();
+        
         return t.position;
     }
 }

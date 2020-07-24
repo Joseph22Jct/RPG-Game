@@ -12,7 +12,8 @@ public class TargetButtonInformationScript : MonoBehaviour
     public void Selected(){
         BattlePlayerUI.Instance.selected = slot;
         BattlePlayerUI.Instance.UpdateTargetUI();
+        
     }
-    
+   
     
 }

@@ -8,7 +8,8 @@ public class ACT_Strike : Actions
     public override void Effect(){
 
         List<AnimationStep> AnimationSteps = new List<AnimationStep>();
-        AnimationSteps.Add(new AnimationStep().MoveCamera(0, CameraAnchors.Instance.PlayerSide, CameraAnchors.Instance.EnemySide,3,0.1f));
+        AnimationSteps.Add(new AnimationStep().MoveCamera(0,10,0.1f));
+        
 
         int[] targets = BattleMediator.Instance.GetTargets();
 

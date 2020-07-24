@@ -169,9 +169,10 @@ public class BattleManager : MonoBehaviour
     BattleEvents CurrentEvent;
     Phases CurrentPhase;
     public void ExecuteEvent(){
-        if(CurrentEvent == null)
+        if(CurrentEvent == null){
         CurrentEvent = BattleQueue.Dequeue();
         CurrentEvent.thisMove.BattleAction.Effect();
+        }
         if(listOfPhases.Count >0){
         CurrentPhase = listOfPhases.Dequeue();
         switch(CurrentPhase.showntype){
@@ -210,16 +211,17 @@ public class BattleManager : MonoBehaviour
     public AnimationStep CurrentAnim;
     int AnimCount;
     float AnimTime;
+    
     public void AnimationPhase(){
         AnimTime+= Time.deltaTime;
         
 
-        if (AnimTime>= CurrentAnim.Timer){ // Execute when timer hits
+        if (AnimTime>= CurrentAnim.Timer ){ // Execute when timer hits
         
 
         switch(CurrentAnim.typeOfAnimation){
             case 0: //MoveCamera
-            BattleCamera.Instance.MoveCamera(CurrentAnim.TargetT.position, CurrentAnim.speed, CurrentAnim.ObjLookAt.transform.position);
+            BattleCamera.Instance.MoveCamera(CurrentAnim.typeOfMovement, CurrentAnim.speed, CurrentEvent);
 
             break;
             case 1: //Movechar
@@ -229,9 +231,7 @@ public class BattleManager : MonoBehaviour
             case 3: //Change Frame
             break;
 
-            case -1: //End
-            currentState = ExecuteEvent;
-            break;
+        
             
 
             //Add the rest.
@@ -239,7 +239,15 @@ public class BattleManager : MonoBehaviour
 
         }
         AnimCount++;
+
+        try{
         CurrentAnim = Animations[AnimCount];
+        }
+        catch{
+            currentState = BattleWait;
+        }
+
+        
         
             
         }
