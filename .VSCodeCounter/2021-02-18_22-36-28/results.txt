@@ -1,0 +1,97 @@
+Date : 2021-02-18 22:36:28
+Directory : c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts
+Total : 66 files,  3667 codes, 164 comments, 1150 blanks, all 4981 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |         66 |      3,667 |        164 |      1,150 |      4,981 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                   | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                      |         66 |      3,667 |        164 |      1,150 |      4,981 |
+| AnimationScripts                                                                                                       |          1 |         30 |          4 |          8 |         42 |
+| Combat Scripts                                                                                                         |         12 |        665 |         58 |        232 |        955 |
+| Combat Scripts\Battle System                                                                                           |          3 |         35 |         20 |         14 |         69 |
+| OverworldScripts                                                                                                       |          5 |        221 |         29 |         81 |        331 |
+| TitleScreen                                                                                                            |          1 |         28 |          6 |         10 |         44 |
+| UIScripts                                                                                                              |         26 |      1,519 |         33 |        447 |      1,999 |
+| UIScripts\Management Scripts                                                                                           |         12 |        865 |         10 |        239 |      1,114 |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                               | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\AnchorAI.cs                                                 | C#       |         19 |          1 |          5 |         25 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\AnimationScripts\PopUpAnimationSequence.cs                  | C#       |         30 |          4 |          8 |         42 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\BattleAnimationManager.cs                                   | C#       |         17 |          2 |         11 |         30 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\BattleCamera.cs                                             | C#       |         48 |          1 |         18 |         67 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\BattlePlayerUI.cs                                           | C#       |        158 |          0 |         45 |        203 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\BattleUnitDataUI.cs                                         | C#       |         75 |          0 |         22 |         97 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\BattleUnitDataUIText.cs                                     | C#       |         25 |          0 |          2 |         27 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\BodyColoringForShader.cs                                    | C#       |         46 |          1 |         23 |         70 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\CameraAnchors.cs                                            | C#       |         21 |          0 |          6 |         27 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\AnimationStep.cs                             | C#       |         53 |          1 |         13 |         67 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\Backgrounds.cs                               | C#       |          6 |          1 |          2 |          9 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\Battle System\ActionAnimation.cs             | C#       |         13 |          1 |          4 |         18 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\Battle System\Actions.cs                     | C#       |          7 |         19 |          4 |         30 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\Battle System\Phases.cs                      | C#       |         15 |          0 |          6 |         21 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\BattleEnemyAnimations.cs                     | C#       |         38 |          0 |          6 |         44 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\BattleEvents.cs                              | C#       |         10 |          0 |          4 |         14 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\BattleManager.cs                             | C#       |        196 |          4 |         76 |        276 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\BattleMediator.cs                            | C#       |         28 |          0 |         15 |         43 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\FlipNormals.cs                               | C#       |          8 |         25 |          3 |         36 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\PlayerBattleAnimation.cs                     | C#       |        212 |          1 |         61 |        274 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Combat Scripts\UnitData4Combat.cs                           | C#       |         79 |          6 |         38 |        123 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\CombatUnitHandler.cs                                        | C#       |         10 |          0 |          2 |         12 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\EquipableEXPData.cs                                         | C#       |         10 |          0 |          3 |         13 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\FightBattleMenuCommand.cs                                   | C#       |         18 |          0 |          4 |         22 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\GameplayPartyManager.cs                                     | C#       |        119 |          3 |         48 |        170 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\Inventory_Item.cs                                           | C#       |         25 |          0 |          9 |         34 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\ItemRecolorTesting.cs                                       | C#       |         47 |          2 |         10 |         59 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\OverworldScripts\LayerOrderingStatic.cs                     | C#       |          9 |          0 |          2 |         11 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\OverworldScripts\LayerOrderingbyMov.cs                      | C#       |         17 |          2 |          3 |         22 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\OverworldScripts\PlayerMovement.cs                          | C#       |         99 |         20 |         45 |        164 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\OverworldScripts\SmoothCameraFollow.cs                      | C#       |         18 |          3 |          5 |         26 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\OverworldScripts\TreasureChestScript.cs                     | C#       |         78 |          4 |         26 |        108 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\PlayableUnit.cs                                             | C#       |        265 |          4 |         82 |        351 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\PlayerUnitAnimation.cs                                      | C#       |        202 |          2 |         49 |        253 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\SoundManager.cs                                             | C#       |         41 |         16 |         14 |         71 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\TargetButtonHandler.cs                                      | C#       |          6 |          0 |          3 |          9 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\TargetButtonInformationScript.cs                            | C#       |         13 |          0 |          7 |         20 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\TitleScreen\MainMenuAnimationScript.cs                      | C#       |         28 |          6 |         10 |         44 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\BarSettingScript.cs                               | C#       |         15 |          0 |          3 |         18 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\CharacterSelectUIOW.cs                            | C#       |         67 |          0 |         18 |         85 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\DescriptionManager.cs                             | C#       |         12 |          1 |          4 |         17 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\MainMenuUIAnimationScript.cs                      | C#       |         37 |         15 |         16 |         68 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\CounterToDropScript.cs         | C#       |         95 |          0 |         13 |        108 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\EXPBarScript.cs                | C#       |         21 |          0 |          6 |         27 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\EquipManagementSelectScript.cs | C#       |         31 |          0 |         11 |         42 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\EquipManagementUnitSelect.cs   | C#       |         63 |          0 |         14 |         77 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\EquipMenuButtonHighlight.cs    | C#       |         26 |          0 |         10 |         36 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\EquipMenuUIInventoryScript.cs  | C#       |         88 |          3 |         21 |        112 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\EquipmentExperienceBar.cs      | C#       |         25 |          0 |          2 |         27 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\ItemPartyMemberPick.cs         | C#       |         39 |          0 |         15 |         54 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\ItemSelectedUIInstructions.cs  | C#       |         93 |          3 |         20 |        116 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\ItemSlot.cs                    | C#       |        234 |          2 |         81 |        317 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\MoreInfoPanelScript.cs         | C#       |         97 |          2 |         30 |        129 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\Management Scripts\OnClickActionSelectManager.cs  | C#       |         53 |          0 |         16 |         69 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\OnMenuOptionSelectScript.cs                       | C#       |        109 |          0 |         40 |        149 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\OnOptionSelectHighlight.cs                        | C#       |         20 |          0 |         11 |         31 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\OnSimpleDescriptionAwake.cs                       | C#       |         21 |          1 |          6 |         28 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\OverworldEnemyScript.cs                           | C#       |         17 |          2 |          7 |         26 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\OverworldMenuManager.cs                           | C#       |         40 |          1 |         25 |         66 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\PlayerIconHighlightForInfo.cs                     | C#       |         14 |          0 |          4 |         18 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\StatIconBehavior.cs                               | C#       |         42 |          0 |         18 |         60 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\StatusPart2Script.cs                              | C#       |        143 |          0 |         30 |        173 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\StatusPartEquipScript.cs                          | C#       |        104 |          3 |         23 |        130 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\UIScripts\TextShadingMatcher.cs                             | C#       |         13 |          0 |          3 |         16 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\WIPButton.cs                                                | C#       |         10 |          0 |          2 |         12 |
+| c:\Users\Giuse\Desktop\Game Making\RPG-Game\Assets\Scripts\WeaponRecolor.cs                                            | C#       |         29 |          2 |          7 |         38 |
+| Total                                                                                                                  |          |      3,667 |        164 |      1,150 |      4,981 |
++------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
